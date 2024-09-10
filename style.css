@@ -1,0 +1,1243 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3rem;
+  /*========== Colors ==========*/
+  --hue-color: 206;
+  --colore-sfondo: #0f0f10;
+  --colore-sfondo-pulsante-hover: hsl(var(--colore-sfondo), 4%, 8%);
+  --colore-titolo: hsl(44.83deg 100% 87.11%);
+  --colore-testo: hsl(72.52deg 100% 98.53%);
+  --colore-bianco: #FFF;
+  --Colore-pulsante: rgba(255, 238, 189, 0.1);
+  --colore-link: #ffeebd;
+  --sfondo-scrollup: hsl(var(--colore-sfondo), 4%, 10%);
+  --text-gradient: linear-gradient(hsl(var(--hue-color), 4%, 24%), hsl(var(--hue-color), 4%, 8%));
+  /* --gradiente-testo: linear-gradient(hsl(var(--colore-sfondo), 4%, 24%), hsl(var(--colore-sfondo), 4%, 8%)); */
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 5rem;
+  --bigger-font-size: 3.5rem;
+  --big-font-size: 2.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  /*========== Margine Bottom ==========*/
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2-5: 2.5rem;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 7.5rem;
+    --bigger-font-size: 4.5rem;
+    --big-font-size: 4rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--colore-sfondo);
+  color: var(--colore-testo);
+}
+
+
+
+/*GERARCHIA TESTUALE*/
+h1, h2, h3 {
+  color: var(--colore-titolo);
+  /* font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1); */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/*ELENCO PUNTATO*/
+ul {
+    list-style: none;
+}
+
+/*IMMAGINI*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*========== LINKS =========*/
+/*LINKS*/
+a {
+  text-decoration: none;
+  color: var(--colore-testo);
+  font-size: 18px;
+}
+
+a:hover {
+    color: var(--colore-link);
+  }
+
+
+/* Active link */
+.active-link {
+  background: var(--colore-link);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Default Logo */
+.logo {
+  width: 160px;
+  margin: 0px;
+  position: relative;
+}
+
+
+
+/*=============== BUTTONS ===============*/
+button {
+  cursor: pointer;
+  margin-top: 20px;
+  display: inline-block;
+  letter-spacing: 1px;
+  font-size: medium;
+  background-color: var(--Colore-pulsante);
+  color: var(--colore-bianco);
+  padding: 1rem 1.25rem;
+  border-radius: 2rem;
+  transition: .3s;
+  border: 1px solid rgba(255, 180, 60, 0.2);
+  box-shadow:  8px 12px 12px -12px rgb(253, 210, 141) inset, -10px -10px 10px -10px rgba(153, 130, 100, 0.8) inset;
+}
+
+button:hover {
+  background-color: var(--colore-sfondo-pulsante-hover);
+  box-shadow:  6px 6px 6px rgba(255, 238, 189, 0.2);
+}
+
+.button__icon {
+  font-size: 1.2rem;
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .75rem;
+}
+
+
+/*PULSANTI
+button,
+input {
+  border: none;
+  outline: none;
+}*/
+
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+  padding: 4rem 0 2rem;
+  /* height: 100vh !important; */
+}
+
+.section__title {
+  font-size: var(--bigger-font-size);
+  text-align: center;
+  margin-bottom: var(--mb-2-5);
+}
+
+.section__title-gradient {
+  background: var(--gradiente-testo);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+
+/*=============== LAYOUT ===============*/
+.main {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 968px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+
+/*=============== HEADER ===============*/
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: transparent;
+  backdrop-filter: blur(20px);
+}
+
+
+
+
+/*=============== NAV ===============*/
+.nav {
+  height: calc(var(--header-height) + 1.5rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  display: flex;
+  width: 2rem;
+}
+
+/* .nav__list {
+  flex-direction: row;
+  column-gap: 3.5rem;
+} */
+
+/* .nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+} */
+
+
+/* a.nav__link {
+  color: var(--colore-bianco);
+  backdrop-filter: contrast(0.5);
+  filter: drop-shadow(2px 2px 6px black);
+  font-size: var(--normal-font-size);
+  text-transform: initial;
+} */
+
+/* .chisono__title {
+  color: var(--colore-link);
+  font-size: var(--h2-font-size);
+  text-transform: uppercase;
+  font-weight: var(--font-semi-bold);
+  background: var(--gradiente-testo);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: .4s;
+} */
+
+.nav__link:hover {
+  background: var(--colore-link);
+  color: transparent;
+  background-clip: text;
+}
+
+
+nav.nav.container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  /* gap: 30vw; */
+  padding: 40px;
+}
+
+
+/*=============== ELEMENTO DI RICERCA DELLA NAVBAR ===============*/
+.ricerca {
+  position: relative;
+  /* margin: auto; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 160px;
+  height: 100px;
+}
+.ricerca .search {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  /* background: crimson; */
+  border-radius: 50%;
+  transition: all 1s;
+  z-index: 4;
+  /* box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4); */
+}
+.ricerca .search:hover {
+  cursor: pointer;
+}
+/*animazione icona di ricerca*/
+.ricerca .search::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 22px;
+  right: 0;
+  bottom: 0;
+  left: 22px;
+  width: 12px;
+  height: 2px;
+  background: white;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+.ricerca .search::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: -5px;
+  right: 0;
+  bottom: 0;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: all 0.5s;
+}
+.ricerca input {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 100;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background: rgba(15, 15, 16, 100%);
+  color: white;
+  /* text-shadow: 0 0 10px #ffeebd;; */
+  padding: 0 80px 0 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 25px 0 #ffeebd;, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+  transition: all 1s;
+  opacity: 0;
+  z-index: 5;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+}
+
+.ricerca input:hover {
+  cursor: pointer;
+}
+.ricerca input:focus {
+  width: 300px;
+  opacity: 1;
+  cursor: text;
+}
+/*icona di chiusura ricerca*/
+.ricerca input:focus ~ .search {
+  right: -72%;
+  background: var(var--colore-sfondo);
+  z-index: 6;
+}
+.ricerca input:focus ~ .search::before {
+  top: 0;
+  left: 0;
+  width: 25px;
+}
+.ricerca input:focus ~ .search::after {
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  border: none;
+  background: white;
+  border-radius: 0%;
+  transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+/*placeholder testo*/
+.ricerca input::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-weight: bolder;
+}
+
+
+
+/*=============== DIMENSIONE E ALLIENAMENTO ELEMENTI DELLA NAVBAR ===============*/
+
+/*DIMENSIONE IMMAGINE - LOGO*/
+header .logo{
+  width: 160px;
+}
+
+/*POSIZIONE DEL HEADER MENU*/
+header .menu{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-weight: 500;
+}
+
+
+
+/*TEST HAMBURGER MENU*/
+/* Stile di base per il menu e i link */
+.nav .menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* width: 400px; */
+}
+
+/* .nav .nav__item {
+  margin-left: 20px;
+
+} */
+
+/* Colore dei link nel menu */
+/* .nav .nav__link {
+  text-decoration: none;
+  color: #000; 
+} */
+
+
+
+
+/* Stile per l'hamburger */
+.hamburger {
+  display: none;
+  cursor: pointer;
+
+}
+
+/* Checkbox nascosto */
+.nav-toggle {
+  display: none;
+}
+/* Menu - con icona di chiusura nascosto */
+.nav__close {
+  display: none;
+}
+
+/* Nascondi l'icona di chiusura per default */
+#hamburger-close-icon {
+  display: none;
+}
+
+
+
+/*SOTTOMENU*/
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__link {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--colore-sfondo);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.submenu .nav__link {
+  padding: 10px 15px;
+  white-space: nowrap;
+}
+
+.nav__item:hover .submenu {
+  display: block;
+}
+
+
+
+
+
+
+
+
+/*=============== CONTENITORE ICONE DI RICERCA ===============*/
+.search {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 6vw;
+  /* position: relative; */
+  padding: 20px;
+  cursor: pointer;
+}
+
+/*DIMENSIONE IMMAGINE - ICONA DI RICERCA*/
+svg{
+  width: 25px;
+}
+
+/* Change background header 
+.scroll-header {
+  background-color: var(--colore-sfondo);
+}*/
+
+
+
+
+
+
+
+
+
+
+/*=============== SEZIONE HERO - SLIDER CON CAROSELLO ===============*/
+.slider{
+  height: 100vh;
+  margin-top: -50px;
+  position: relative;
+}
+.slider .list .item{
+  position: absolute;
+  inset: 0 0 0 0; /*evita la sovrapposzione degli elementi*/
+  overflow: hidden;
+  opacity: 0;
+  transition: .5s;
+}
+.slider .list .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*strato overlay immagine sezione hero*/
+.slider .list .item::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, var(--colore-sfondo) 10%, transparent);
+  /* filter: drop-shadow(2px 4px 6px black); */
+  backdrop-filter: brightness(0.5);
+}
+
+/*versione desktop - allineato al centro*/
+.slider .list .item .content{
+  position: absolute;
+  top: 30%;
+  width: 100vw;
+  z-index: 1;
+  display: grid;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.slider .list .item .content p:nth-child(1){
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+.slider .list .item .content h2{
+  font-size: 100px;
+  margin: 0;
+}
+.slider .list .item.active{
+  opacity: 1;
+  z-index: 10;
+}
+@keyframes showContent {
+  to{
+      transform: translateY(0);
+      filter: blur(0);
+      opacity: 1;
+  }
+}
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3){
+  transform: translateY(30px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent .5s .7s ease-in-out 1 forwards;
+}
+.slider .list .item.active h2{
+  animation-delay: 1s;
+}
+.slider .list .item.active p:nth-child(3){
+  animation-duration: 1.3s;
+}
+
+
+/*FRECCE DI NAVIGAZIONE SLIDER*/
+.arrows{
+  display: none;
+}
+
+/*MINIATURE D'ANTEPRIMA SLIDER*/
+.thumbnail{
+  position: absolute;
+  bottom: 50px;
+  z-index: 11;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 250px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  overflow: auto;
+  justify-content: center;
+}
+.thumbnail::-webkit-scrollbar{
+  width: 0;
+}
+.thumbnail .item{
+  width: 150px;
+  height: 220px;
+  filter: brightness(.5);
+  backdrop-filter: drop-shadow(2px 4px 6px black);
+  transition: .5s;
+  flex-shrink: 0;
+  -webkit-filter: brightness(.5);
+}
+.thumbnail .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.thumbnail .item.active{
+  filter: saturate(.5);
+  filter: brightness(1);
+  -webkit-filter: brightness(1);
+}
+
+/*TESTO METE - TURISTICHE MINITAUTRE D'ANTEPRIMA SLIDER*/
+.thumbnail .item .content{
+  position: absolute;
+  inset: auto 10px 10px 10px;
+  backdrop-filter: brightness(0.3);
+  filter: drop-shadow(2px 4px 6px black);
+  padding: 10px;
+  margin: -10px;
+}
+
+/*TESTO h2 SEZIONE HERO - SLIDER*/
+.testo_hero{
+  letter-spacing: 20px;
+}
+
+#paragrafo_hero{
+  /* width: 500px;
+  text-align: center; */
+  width: calc(80% - 5rem);
+  text-align: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
+}
+
+/* h2.testo_hero {
+  width: calc(100% -1rem);
+  text-align: center !important;
+} */
+
+.content {
+  text-align: center;
+  width: (80% -1rem);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============== SEZIONE CHI SIAMO ===============*/
+
+.chisono__img {
+  width: 800px;
+  position: absolute;
+  right: 1.5rem;
+  opacity: 20%;
+}
+
+.chisono__header {
+  position: relative;
+}
+
+.chisono__container {
+  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* .chisono__container {
+  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  padding: 0rem 14rem 0rem 14rem;
+  gap: 40px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+} */
+
+
+
+.chisono__img {
+  left: -2rem;
+  top: 4rem;
+}
+
+.chisono__title {
+  top: -4rem;
+  left: 1rem;
+  line-height: 6rem;
+  /* font-size: var(--biggest-font-size); */
+  background: var(--text-gradient);
+  color: transparent;
+  background-clip: text;
+  letter-spacing: 20px;
+  z-index: -1;
+}
+
+.chisono__subtitle {
+  /* font-size: var(--big-font-size); */
+  font-size: calc(4rem - 80%);
+  margin-bottom: var(--mb-2-5);
+}
+
+.chisono__title-description {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1);
+}
+
+.chisono__description {
+  margin-bottom: var(--mb-2-5);
+  line-height: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============== SEZIONE OFFERTA VIAGGIO ===============*/
+
+.offerta {
+  position: relative;
+  background-image: url('./assets/img/image agenzia italiana di viaggi/Sicilia/Taormina/jonathan-skule-vEsPPka4m4Q-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--colore-testo); /* Colore del testo */
+}
+
+.contenuto {
+  /* filter: drop-shadow(2px px 1px black)!important; */
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20vh;
+  /* padding: 60px 36rem 60px; */
+  backdrop-filter: brightness(0.4)!important;
+  background-image: linear-gradient(to top, var(--colore-sfondo) 10%, transparent);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  width: 100vw;
+}
+
+/*Griglia Attività - Pagina Servizi*/
+.card {
+  display: flex;
+  gap: 120px;
+  /* width: 85vw; */
+  padding: 60px !important;
+  background: transparent;
+  /* padding: 10px; */
+  flex-direction: row;
+  align-items: center;
+  /* box-shadow: 2px 10px 10px rgb(0 0 0 / 10%); */
+}
+
+/*Descrizione card*/
+.card__subtitle {
+font-size: calc(4rem - 80%);
+}
+
+.card_1 {
+  display: flex; /* allineo in orizzontale gli elementi della card */
+  gap: 120px;
+  width: 85vw;
+  padding: 60px!important;
+  background: transparent;
+  /* backdrop-filter: blur(100px)!; */
+  padding: 10px;
+  flex-direction: row;
+  align-items: center;
+  /* box-shadow: 2px 10px 10px rgb(0 0 0 / 10%); */
+}
+
+.colonna1{
+  width: fit-content;
+}
+
+.colonna2{
+  max-width: 600px;
+  /* width: 1440px; */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Overlay dietro il contenuto */
+}
+
+/*strato più scuro sovrapposto all'immagine*/
+.sovrapposizione {
+  background-image: linear-gradient(to bottom, #262626 20%, transparent);
+
+  }
+
+/*paragrafo*/
+p{
+  white-space: pre-line;
+  line-height: 1.6rem;
+}
+
+
+
+b{
+  text-transform: uppercase;
+  color: var(--colore-link);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============== SEZIONE CAROSELLO DESTINAZIONI ===============*/
+/* Stili per il carosello */
+
+.title{
+  padding:40px;
+  display: grid;
+  width: 50%;
+}
+/*TESTO DESCRITTIVO SOPRA CAROSELLO*/
+/* .regione{
+  position: relative;
+  z-index: 10;
+  backdrop-filter: brightness(0.2);
+  padding: 40px;
+  margin: 0;
+} */
+
+
+
+/* Stili per l'elemento .regione */
+.regione {
+  position: absolute; /* Cambiato per rendere l'elemento sovrapposto */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  padding: 40px;
+  margin: 0;
+  backdrop-filter: brightness(0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Applicare gli stili quando il cursore è sopra il carosello */
+.location-carousel:hover .regione {
+  opacity: 1;
+}
+
+
+.carosello {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+}
+
+.carosello-item {
+  flex: 0 0 auto;
+  width: calc(100% / 4); /*Modifica questo valore in base al numero di immagini visibili*/
+  transition: transform 0.5s;
+}
+
+figure img, figure video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.s-padding {
+  padding: max(3rem, 3vw) 0;
+}
+
+.container {
+  width: calc(100% - 10.5rem);
+  max-width: 80%;
+  /* max-width: none; */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* OVERLAY IMG SIZE */
+.location-carousel .carosello-item a figure {
+  position: relative;
+  overflow: hidden;
+}
+
+/* SIZE RAPPORTO IMG CAROSELO */
+.location-carousel .carosello-item a figure > img:not(:nth-child(2)), 
+.location-carousel .carosello-item a figure > img:not(:nth-child(3)) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(1);
+  transition: .8s all;
+  z-index: 0;
+}
+
+/* GRANDEZZA - ALTEZZA IMG CAROSELLO */
+.location-carousel .carosello-item a figure > img:nth-child(2), 
+.location-carousel .carosello-item a figure > img:nth-child(3) {
+  position: relative;
+  z-index: 1;
+  height: 40rem;
+  width: auto;
+  object-fit: unset;
+  opacity: 0;
+  transition: .6s all;
+}
+
+/* EFFETTO OVERLAY - AFTER IN HOVER SU IMG CAROSELLO */
+.location-carousel .carosello-item a figure:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000b3;
+  opacity: 0;
+  transition: .4s all;
+}
+
+
+
+
+/* EFFETTO AFTER IN HOVER SU IMG CAROSELLO */
+@media (hover: hover) {
+  .location-carousel .carosello-item a:hover figure > img:not(:nth-child(2)), 
+  .location-carousel .carosello-item a:hover figure > img:not(:nth-child(3)) {
+      transform: scale(1.04);
+  }
+
+  .location-carousel .carosello-item a:hover figure > img:nth-child(2), 
+  .location-carousel .carosello-item a:hover figure > img:nth-child(3) {
+      opacity: 1;
+  }
+
+  .location-carousel .carosello-item a:hover figure:before {
+      opacity: 0;
+  }
+
+  .location-carousel .carosello-item a:hover figure:after {
+      opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============== SEZIONE PIE DI PAGINA ===============*/
+
+/*=============== FOOTER ===============*/
+.footer__logo {
+  width: 80px;
+}
+
+.footer__container {
+  /*grid-template-columns: .4fr .7fr .7fr 1fr;*/
+  grid-template-columns: .4fr .4fr .4fr 0fr;
+}
+
+/*migliore*/
+.footer__container.container.grid {
+  /*display: ruby-text;*/
+  justify-content: center;
+  flex-direction: column;
+  padding: 6vh 6vh 6vh;
+  margin: auto;
+  flex-wrap: nowrap;
+  align-content: space-between;
+}
+
+
+.footer__social {
+  align-items: center;
+  padding: 20px 0px 20px;
+  display: flex;
+  column-gap: 1.25rem;
+}
+
+.footer__copy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid;
+  /* padding: 20px 20px 0px; */
+  width: 90vw;
+  margin: auto;
+  letter-spacing: 1px;
+  font-size: smaller;
+}
+
+.footer__content {
+  margin: 20px 0px 0px 0px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+}
+
+.footer__content_info {
+  /* width: max-content;*/
+}
+
+.footer__content_destinazioni {
+  display: flex;
+  justify-content: center;
+}
+
+/* footer.footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 40px;
+  position: relative;
+  gap: 40px;
+} */
+
+/*=============== SCROLL UP ===============*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  display: flex;
+  background-color: var(--sfondo-scrollup);
+  border-radius: .25rem;
+  padding: .45rem;
+  opacity: 9;
+  z-index: 10;
+  transition: .4s;
+}
+
+/* Show Scroll Up*/
+.show-scroll {
+  bottom: 5rem;
+}
+
+
+
+/*PAGINCA CONTATTI - FORM DI PRENOTAZIONE*/
+.colonna1_testo {
+  text-align: center;
+}
+
+.colonna2_form {
+  max-width: 600px;
+  width: 1440px;
+}
+
+.feedback-input {
+	color:#949494;
+  font-weight:500;
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 22px;
+	/* background-color: #fbfbfb; */
+  backdrop-filter: blur(20px);
+  background: transparent;
+	padding: 13px 13px 13px 13px;
+	/* margin-bottom: 10px; */
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+  align-items: center;
+  box-shadow: 0 0 2px 0 #ffeebd;
+  margin-bottom: 20px;
+  background-color: var(--colore-sfondo);
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	background-color:var(--colore-sfondo);
+  color: var(--colore-testo)
+}
+
+fieldset {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border: none;
+  
+}
+
+/*pagina singole regione - destinazioni*/
+.img_regione{
+  /* max-width: 160%; */
+  max-width: calc(160% - 5rem);
+  height: auto;
+  object-fit: cover;
+  filter: brightness(0.5);
+}

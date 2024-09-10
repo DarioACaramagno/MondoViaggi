@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+    <head>
+        <title>Agenzia di Viaggi Italiana</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="decription" content="Una raccolta delle località italiane da visitare">
+        <meta name="keywords" content="località, viaggi, vacanze, italia">
+        <meta name="author" content="Dario Caramagno">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./Responsive_Style.css">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    </head>
+
+
+    <body>
+    <!--=============== HEADER ===============-->
+    <header id="header">
+        <nav class="nav container">
+            <div class="logo" alt="Logo">
+                <a href="./index.html">
+                    <img src="./assets/img/LOGO-B.png">
+                </a>
+            </div>
+
+            <div>
+                <!-- controlla la visibilità del menu. -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <!-- Se il menu viene cliccato, menu cambia lo stato del checkbox. -->
+                <label for="nav-toggle" class="hamburger">
+                    <!-- Icona del menu hamburger -->
+                     <i class="ri-menu-line"></i>
+                </label>
+
+
+                <ul class="menu" id="nav-menu">
+                    <li class="nav__item">
+                        <a href="./index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./Agenzia.html" class="nav__link">Chi siamo</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./Destinazioni.html" class="nav__link">Destinazioni</a>
+                        <ul class="submenu">
+                            <li class="nav__item">
+                              <a href="./Sicilia.html" class="nav__link">Sicilia</a>
+                              <a href="./Veneto.html" class="nav__link">Veneto</a>
+                              <a href="./Trentino.html" class="nav__link">Trentino</a>
+                              <a href="./Liguria.html" class="nav__link">Liguria</a>
+                              <a href="./Campania.html" class="nav__link">Campania</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="./Attività.html" class="nav__link active-link">Servizi</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="./contatti.html" class="nav__link">Contatti</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <!-- Icona deI RICERCA -->
+            <div class="ricerca" id="ricerca">
+                <input type="text" placeholder="Cerca...">
+                <div class="search"></div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+<main class="main">
+    <!-- SLIDER CAROUSEL -->
+    <section class="slider" id="home">
+        <!-- list Items -->
+        <div class="list">
+            <div class="item active">
+                <img src="./assets/img/image agenzia italiana di viaggi/Sicilia/Aci Trezza/karol-chomka-9sj3HVs9KT0-unsplash.jpg">
+                <div class="content">
+                    <p>Agenzia di Viaggi Italiana</p>
+                    <a href="./Sicilia.html#ACITREZZA_section">
+                        <h2 class="testo_hero">ACITREZZA</h2>
+                    </a>
+                    <span id="paragrafo_hero">Tra leggenda e realtà, Acitrezza è celebre per i Faraglioni dei Ciclopi, maestosi scogli vulcanici che emergono dal mare.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/image agenzia italiana di viaggi/Veneto-Venezia/clay-banks-M4n71zrXQ8c-unsplash.jpg">
+                <div class="content">
+                    <p>Agenzia di Viaggi Italiana</p>
+                    <a href="./Veneto.html#VENEZIA_section">
+                        <h2 class="testo_hero">VENEZIA</h2>
+                    </a>
+                    <span id="paragrafo_hero">Un luogo dove il tramonto dipinge l’acqua d’oro, i profumi avvolgono l’aria e le melodie danzano tra antichi canali senza tempo.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/image agenzia italiana di viaggi/Trentino-Alto-Adige/Passo Rolle-Trento/giuseppe-mondi-K0VLuATuQ9o-unsplash.jpg">
+                <div class="content">
+                    <p>Agenzia di Viaggi Italiana</p>
+                    <a href="./Trentino.html#TRENTO_section">
+                        <h2 class="testo_hero">TRENTO</h2>
+                    </a>
+                    <span id="paragrafo_hero">Tra montagne imponenti e palazzi rinascimentali, si aprono vie lastricate di storia, gusti autentici e panorami che tolgono il fiato a ogni sguardo.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/image agenzia italiana di viaggi/Liguria/Parco-Nazionale-delle-Cinque-Terre_Spezia/Vernazza/anders-jilden-cYrMQA7a3Wc-unsplash.jpg">
+                <div class="content">
+                    <p>Agenzia di Viaggi Italiana</p>
+                    <a href="./Liguria.html#VERNAZZA_section">
+                        <h2 class="testo_hero">VERNAZZA</h2>
+                    </a>
+                    <span id="paragrafo_hero">Uno dei cinque pittoreschi borghi delle Cinque Terre, situato sulla costa ligure, continua da secoli a catturare l’immaginazione di artisti e viaggiatori.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/image agenzia italiana di viaggi/Campania/Salerno/Positano - Costiera Amalfitana/silvia-trigo-kAE6Kd7W2UA-unsplash.jpg">
+                <div class="content">
+                    <p>Agenzia di Viaggi Italiana</p>
+                    <a href="./Campania.html#POSITANO_section">
+                        <h2 class="testo_hero">POSITANO</h2>
+                    </a>
+                    <span id="paragrafo_hero">Lasciati guidare dal Sentiero degli Dei e ammira le vedute della Costiera Amalfitana, un’esperienza che offre un contatto diretto con la natura.</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- thumbnail -->
+        <div class="thumbnail">
+            <div class="item active">
+                <img src="./assets/img/image agenzia italiana di viaggi/Sicilia/Aci Trezza/karol-chomka-9sj3HVs9KT0-unsplash.jpg">
+                <div class="content">
+                    Acitrezza
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/image agenzia italiana di viaggi/Veneto-Venezia/clay-banks-M4n71zrXQ8c-unsplash.jpg">
+                <div class="content">
+                    Venezia
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/image agenzia italiana di viaggi/Trentino-Alto-Adige/Passo Rolle-Trento/giuseppe-mondi-K0VLuATuQ9o-unsplash.jpg">
+                <div class="content">
+                    Trento
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/image agenzia italiana di viaggi/Liguria/Parco-Nazionale-delle-Cinque-Terre_Spezia/Vernazza/anders-jilden-cYrMQA7a3Wc-unsplash.jpg">
+                <div class="content">
+                    Vernazza
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/image agenzia italiana di viaggi/Campania/Salerno/Positano - Costiera Amalfitana/silvia-trigo-kAE6Kd7W2UA-unsplash.jpg">
+                <div class="content">
+                    Positano
+                </div>
+            </div><!-- button arrows -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+
+        </div>
+    </section>
+
+
+
+
+<!-- SEZIONE SERVIZI / ATTIVITÀ  - GRIGLIA -->
+    <section class="offerta">
+        <div class="sovrapposizione">
+            <div class="contenuto">
+                <div class="card">
+
+                    <!-- VISITE GUIDATE -->
+                    <div class="colonna2">
+                        <div class="colonna1">
+                        <div>
+                            <img src="assets/img/SERVIZI/giacomo-folli-lJlLgw9zdes-unsplash.jpg" alt="Visite-Guidate.image">
+                        </div>
+
+                        </div>
+                        <h2 class="card__subtitle">VISITE GUIDATE</h2>
+                        <p>
+                            Le visite guidate offrono un’immersione profonda nella storia e cultura delle destinazioni italiane. Questi tour includono esplorazioni dei monumenti storici, chiese e musei, arricchite da dettagli affascinanti e storie locali
+                        </p>
+                        <button>
+                            <a href="./contatti.html">Richiedi Maggiori Informazioni</a>
+                        </button>
+                    </div>
+
+                    <!-- GITE IN BARCA -->
+                    <div class="colonna2">
+                        <div class="colonna1">
+                        <div>
+                            <img src="assets/img/SERVIZI/remi-boudousquie-o70gjo9PGes-unsplash.jpg" alt="Gite-in-Barca.image">
+                        </div>
+                        </div>
+                        <h2 class="card__subtitle">GITE IN BARCA</h2>
+                        <p>
+                            Le gite in barca permettono di esplorare la bellezza della costa italiana da una prospettiva unica. I tour offrono viste spettacolari delle scogliere, delle baie nascoste e dei pittoreschi villaggi costieri, con opportunità di nuotare e fare snorkeling in acque cristalline.
+                        </p>
+                        <button>
+                            <a href="./contatti.html">Richiedi Maggiori Informazioni</a>
+                        </button>
+                    </div>
+                </div>
+    
+
+                <!-- ESCURSIONI -->
+                <div class="card">
+                    <div class="colonna2">
+                        <div class="colonna1">
+                        <div>
+                            <img src="assets/img/SERVIZI/nicola-fittipaldi-d1r2DYCO8pQ-unsplash.jpg" alt="Escursioni.image">
+                        </div>
+                        </div>
+                        <h2 class="card__subtitle">ESCURSIONI</h2>
+                        <p>
+                            Le escursioni possono includere visite a parchi naturali, siti archeologici e storici, con percorsi che variano da passeggiate tranquille a trekking più impegnativi. Ogni escursione è progettata per offrire un'esperienza completa, combinando bellezza naturale e approfondimenti culturali.
+                        </p>
+                        <button>
+                            <a href="./contatti.html">Richiedi Maggiori Informazioni</a>
+                        </button>
+                    </div>
+
+                    <!-- TRANSFER -->
+                    <div class="colonna2">
+                        <div class="colonna1">
+                        <div>
+                            <img src="assets/img/SERVIZI/why-kei-8e2gal_GIE8-unsplash.jpg" alt="Transfer.image">
+                        </div>
+                        </div>
+                        <h2 class="card__subtitle">TRANSFER</h2>
+                        <p>
+                            Il servizio di transfer garantisce trasporti comodi e senza stress tra le varie destinazioni. I transfer includono spostamenti da e per aeroporti e stazioni ferroviarie, con opzioni di accoglienza personalizzata e assistenza con i bagagli. Sono disponibili anche trasferimenti tra città e località, assicurando viaggi sicuri e piacevoli.
+                        </p>
+                        <button>
+                            <a href="./contatti.html">Richiedi Maggiori Informazioni</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- DESTINAZIONI SEZIONE CARROSELLO-->
+	<section class="location-carousel" id="destinazioni">
+		<!-- ELEMENTO TESTUALE-->
+		<div class="title">
+			<h2>Le nostre <strong> Destinazioni</strong></h2>
+		</div>
+
+		<!-- ELEMENTO CARROSELLO-->
+		<div class="carosello">
+            <div class="carosello-item">
+                <a href="./Sicilia.html" class="h-full block">
+                    <figure>
+                        <img loading="lazy" decoding="async" width="1024" height="512"
+                            src="./assets/img/image agenzia italiana di viaggi/Sicilia/Taormina/jonathan-skule-vEsPPka4m4Q-unsplash.jpg"
+                            class="attachment-large size-large wp-post-image" alt="Taormina, Sicilia">
+                        <img decoding="async" width="340" height="394"
+                            src="./assets/img/image agenzia italiana di viaggi/altro/Italy-Map-Sicilia.svg"
+                            class="attachment-large size-large" alt="" data-skip-lazy="1" loading="lazy">
+                        <div class="regione">
+                            <p class="h6 text-gold">Destinazione</p>
+                            <h3>Sicilia</h3>
+                        </div>
+                    </figure>
+                </a>
+            </div>
+            <div class="carosello-item">
+                <a href="./Veneto.html" class="h-full block">
+                    <figure>
+                        <img loading="lazy" decoding="async" width="1024" height="683"
+                            src="./assets/img/image agenzia italiana di viaggi/Veneto-Venezia/canmandawe-ftTsK4QinMw-unsplash.jpg"
+                            class="attachment-large size-large wp-post-image" alt="Venezia">
+                        <img decoding="async" width="340" height="394"
+                            src="./assets/img/image agenzia italiana di viaggi/altro/Italy-Map-Veneto.svg"
+                            class="attachment-large size-large" alt="" data-skip-lazy="1" loading="lazy">
+                        <div class="regione">
+                            <p>Destinazione</p>
+                            <h3>Veneto</h3>
+                        </div>
+                    </figure>
+                </a>
+            </div>
+            <div class="carosello-item">
+                <a href="./Trentino.html" class="h-full block">
+                    <figure>
+                        <img loading="lazy" decoding="async" width="1024" height="682"
+                            src="./assets/img/image agenzia italiana di viaggi/Trentino-Alto-Adige//Dolomiti/connor-stirling-vfWAYeKye58-unsplash.jpg"
+                            class="attachment-large size-large wp-post-image" alt="Dolomiti, Trentino-Alto-Adige"
+                            srcset="./assets/img/image agenzia italiana di viaggi/felipe-simo-yJaUPqul8gs-unsplash.jpg?strip=all&amp;lossy=1&amp;sharp=1&amp;w=1920&amp;ssl=1 1920w""
+                            sizes="(max-width: 1024px) 100vw, 1024px" draggable="false"
+                            ondragstart="return false;"> <img decoding="async" width="340"
+                            height="394"
+                            src="./assets/img/image agenzia italiana di viaggi/altro/Italy-Map-Trentino.Alto.Adige.svg"
+                            class="attachment-large size-large" alt="" data-skip-lazy="1"
+                            loading="lazy" draggable="false" ondragstart="return false;">
+                        <div class="regione">
+                            <p>Destinazione</p>
+                            <h3>Trentino</h3>
+                        </div>
+                    </figure>
+                </a>
+            </div>
+            <div class="carosello-item">
+                <a href="./Liguria.html" class="h-full block">
+                    <figure>
+                        <img loading="lazy" decoding="async" width="1024" height="512"
+                            src="./assets/img/image agenzia italiana di viaggi/Liguria/Parco-Nazionale-delle-Cinque-Terre_Spezia/Vernazza/vincenzo-inzone-9p3eEgdNOXo-unsplash.jpg"
+                            class="attachment-large size-large wp-post-image" alt="Vernazza Parco-Nazionale-delle-Cinque-Terre, Spezia - Liguria"
+                            srcset="./assets/img/image agenzia italiana di viaggi/dorian-mongel-gVwFedcc1rY-unsplash.jpg?strip=all&amp;lossy=1&amp;sharp=1&amp;w=1920&amp;ssl=1 1920w""
+                            sizes="(max-width: 1024px) 100vw, 1024px" draggable="false"
+                            ondragstart="return false;"> <img decoding="async" width="340"
+                            height="394"
+                            src="./assets/img/image agenzia italiana di viaggi/altro/Italy-Map-Liguria.svg"
+                            class="attachment-large size-large" alt="" data-skip-lazy="1"
+                            loading="lazy" draggable="false" ondragstart="return false;">
+                        <div class="regione">
+                            <p>Destinazione</p>
+                            <h3>Liguria</h3>
+                        </div>
+                     </figure>
+                </a>
+            </div>
+            <div class="carosello-item">
+                <a href="./Campania.html" class="h-full block">
+                    <figure class="p-12 h-full">
+                        <img decoding="async" width="1024" height="683"
+                            src="./assets/img/image agenzia italiana di viaggi/Campania/Salerno/Positano - Costiera Amalfitana/yoosun-won-CPrlIQJCibY-unsplash.jpg"
+                            class="attachment-large size-large wp-post-image"
+                            alt="Costiera Amalfitana, Positano - Campania"
+                            srcset="./assets/img/image agenzia italiana di viaggi/federico-di-dio-photography-Zw_CMLoNILg-unsplash.jpg?strip=all&amp;lossy=1&amp;sharp=1&amp;w=1920&amp;ssl=1 1920w""
+                            sizes="(max-width: 1024px) 100vw, 1024px" draggable="false"
+                            ondragstart="return false;"> <img decoding="async" width="340"
+                            height="394"
+                            src="./assets/img/image agenzia italiana di viaggi/altro/Italy-Map-Campania.svg"
+                            class="attachment-large size-large" alt="" data-skip-lazy="1"
+                            draggable="false" ondragstart="return false;">
+                        <div class="regione">
+                            <p>Destinazione</p>
+                            <h3>Campania</h3>
+                        </div>
+                    </figure>
+                </a>
+            </div>
+        </div>
+	</section>
+</main>
+
+<!--=============== FOOTER ===============-->
+        <footer class="footer">
+            <div class="footer__container container grid">
+                <!-- <a href="./index.html" class="footer__logo">
+                    <img src="../assets/img/LOGO-B.png" alt="Logo Footer">
+                </a> -->
+                <div class="logo" alt="Logo">
+                    <a href="./index.html">
+                        <img src="./assets/img/LOGO-B.png">
+                    </a>
+                </div>
+
+                <div class="footer__content_info">
+                    <h3>Informazioni</h3>
+                    <p>
+                        Punto di riferimento per chi desidera vivere esperienze indimenticabili alla scoperta 
+                        delle meraviglie italiane. Con anni di esperienza nel settore turistico, siamo orgogliosi 
+                        di offrire un servizio personalizzato e attento ai dettagli, garantendo vacanze su misura 
+                        per ogni tipo di viaggiatore.
+                    </p>
+                </div>
+
+                <div class="footer__content_destinazioni">
+                        <ul>
+                            <h3>Destinazioni</h3>
+                            <li>
+                                <a href="./Sicilia.html">Sicilia</a></li>
+                            <li>
+                                <a href="./Veneto.html">Veneto</a>
+                            </li>
+                            <li>
+                                <a href="./Trentino.html">Trentino</a>
+                            </li>
+                            <li>
+                                <a href="./Liguria.html">Liguria</a>
+                            </li>
+                            <li>
+                                <a href="./Campania.html">Campania</a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+
+            <p class="footer__copy" target="_blank"> 
+                &#169; DarioCaramagno. All right reserved
+            </p>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-s-line"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="./main.js"></script>
+
+
+
+        <!--=============== RESPONSIVE IMAGE CAROSELLO JS ===============-->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+    <head>
+        <title>Agenzia di Viaggi Italiana</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="decription" content="Una raccolta delle località italiane da visitare">
+        <meta name="keywords" content="località, viaggi, vacanze, italia">
+        <meta name="author" content="Dario Caramagno">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./Responsive_Style.css">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    </head>
+
+
+    <body>
+    <!--=============== HEADER ===============-->
+    <header id="header">
+        <nav class="nav container">
+            <div class="logo" alt="Logo">
+                <a href="./index.html">
+                    <img src="./assets/img/LOGO-B.png">
+                </a>
+            </div>
+
+            <div>
+                <!-- controlla la visibilità del menu. -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <!-- Se il menu viene cliccato, menu cambia lo stato del checkbox. -->
+                <label for="nav-toggle" class="hamburger">
+                    <!-- Icona del menu hamburger -->
+                     <i class="ri-menu-line"></i>
+                </label>
+
+
+                <ul class="menu" id="nav-menu">
+                    <li class="nav__item">
+                        <a href="./index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./Agenzia.html" class="nav__link">Chi siamo</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./Destinazioni.html" class="nav__link active-link">Destinazioni</a>
+                        <ul class="submenu">
+                            <li class="nav__item">
+                              <a href="./Sicilia.html" class="nav__link">Sicilia</a>
+                              <a href="./Veneto.html" class="nav__link">Veneto</a>
+                              <a href="./Trentino.html" class="nav__link">Trentino</a>
+                              <a href="./Liguria.html" class="nav__link">Liguria</a>
+                              <a href="./Campania.html" class="nav__link">Campania</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="./Attività.html" class="nav__link">Servizi</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="./contatti.html" class="nav__link">Contatti</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <!-- Icona deI RICERCA -->
+            <div class="ricerca" id="ricerca">
+                <input type="text" placeholder="Cerca...">
+                <div class="search"></div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+<main class="main">
+    <!-- SLIDER CAROUSEL -->
+    <section class="slider" id="home">
+        <!-- list Items -->
+        <div class="list">
+            <div class="item active">
+                <img src="./assets/img/image agenzia italiana di viaggi/Sicilia/Aci Trezza/karol-chomka-9sj3HVs9KT0-unsplash.jpg">
+                <div class="content">
+                    <p>Agenzia di Viaggi Italiana</p>
+                    <a href="./Sicilia.html#ACITREZZA_section">
+                        <h2 class="testo_hero">ACITREZZA</h2>
+                    </a>
+                    <span id="paragrafo_hero">Tra leggenda e realtà, Acitrezza è celebre per i Faraglioni dei Ciclopi, maestosi scogli vulcanici che emergono dal mare.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/image agenzia italiana di viaggi/Veneto-Venezia/clay-banks-M4n71zrXQ8c-unsplash.jpg">
+                <div class="content">
+                    <p>Agenzia di Viaggi Italiana</p>
+                    <a href="./Veneto.html#VENEZIA_section">
+                        <h2 class="testo_hero">VENEZIA</h2>
+                    </a>
+                    <span id="paragrafo_hero">Un luogo dove il tramonto dipinge l’acqua d’oro, i profumi avvolgono l’aria e le melodie danzano tra antichi canali senza tempo.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/image agenzia italiana di viaggi/Trentino-Alto-Adige/Passo Rolle-Trento/giuseppe-mondi-K0VLuATuQ9o-unsplash.jpg">
+                <div class="content">
+                    <p>Agenzia di Viaggi Italiana</p>
+                    <a href="./Trentino.html#TRENTO_section">
+                        <h2 class="testo_hero">TRENTO</h2>
+                    </a>
+                    <span id="paragrafo_hero">Tra montagne imponenti e palazzi rinascimentali, si aprono vie lastricate di storia, gusti autentici e panorami che tolgono il fiato a ogni sguardo.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/image agenzia italiana di viaggi/Liguria/Parco-Nazionale-delle-Cinque-Terre_Spezia/Vernazza/anders-jilden-cYrMQA7a3Wc-unsplash.jpg">
+                <div class="content">
+                    <p>Agenzia di Viaggi Italiana</p>
+                    <a href="./Liguria.html#VERNAZZA_section">
+                        <h2 class="testo_hero">VERNAZZA</h2>
+                    </a>
+                    <span id="paragrafo_hero">Uno dei cinque pittoreschi borghi delle Cinque Terre, situato sulla costa ligure, continua da secoli a catturare l’immaginazione di artisti e viaggiatori.</span>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/image agenzia italiana di viaggi/Campania/Salerno/Positano - Costiera Amalfitana/silvia-trigo-kAE6Kd7W2UA-unsplash.jpg">
+                <div class="content">
+                    <p>Agenzia di Viaggi Italiana</p>
+                    <a href="./Campania.html#POSITANO_section">
+                        <h2 class="testo_hero">POSITANO</h2>
+                    </a>
+                    <span id="paragrafo_hero">Lasciati guidare dal Sentiero degli Dei e ammira le vedute della Costiera Amalfitana, un’esperienza che offre un contatto diretto con la natura.</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- thumbnail -->
+        <div class="thumbnail">
+            <div class="item active">
+                <img src="./assets/img/image agenzia italiana di viaggi/Sicilia/Aci Trezza/karol-chomka-9sj3HVs9KT0-unsplash.jpg">
+                <div class="content">
+                    Acitrezza
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/image agenzia italiana di viaggi/Veneto-Venezia/clay-banks-M4n71zrXQ8c-unsplash.jpg">
+                <div class="content">
+                    Venezia
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/image agenzia italiana di viaggi/Trentino-Alto-Adige/Passo Rolle-Trento/giuseppe-mondi-K0VLuATuQ9o-unsplash.jpg">
+                <div class="content">
+                    Trento
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/image agenzia italiana di viaggi/Liguria/Parco-Nazionale-delle-Cinque-Terre_Spezia/Vernazza/anders-jilden-cYrMQA7a3Wc-unsplash.jpg">
+                <div class="content">
+                    Vernazza
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/img/image agenzia italiana di viaggi/Campania/Salerno/Positano - Costiera Amalfitana/silvia-trigo-kAE6Kd7W2UA-unsplash.jpg">
+                <div class="content">
+                    Positano
+                </div>
+            </div><!-- button arrows -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+
+        </div>
+    </section>
+
+
+
+<!-- SEZIONE LOCATION - REGIONI -->
+    <!-- SICILIA -->
+    <section class="offerta">
+        <div class="sovrapposizione">
+            <div class="contenuto">
+                <div class="card_1">
+                    <div class="colonna2">
+                        <h2 class="chisono__subtitle">SICILIA</h2>
+                        <p>
+                            <strong><b>Storia e Cultura:<br></b></strong> La Sicilia è un crocevia di civiltà, con influenze greche, romane, arabe e normanne. La sua storia è raccontata nei templi greci di Agrigento, nei mosaici bizantini di Monreale e nelle architetture barocche di Noto.
+                            <br><strong><b>Paesaggi:<br></b></strong> Caratterizzata da vulcani attivi come l’Etna e lo Stromboli, l’isola offre paesaggi naturali mozzafiato. Le spiagge, come quelle di San Vito Lo Capo e Mondello, sono rinomate per la loro bellezza incontaminata
+                            <br><strong><b>Tradizioni:<br></b></strong> Le feste religiose, come la Settimana Santa di Enna e la festa di Sant'Agata a Catania, riflettono un legame profondo con la spiritualità. La gastronomia locale, famosa per arancini, cannoli e pasta alla norma, è un viaggio tra sapori intensi.
+                            <br><strong><b>Attività:<br></b></strong> Visite a siti archeologici come la Valle dei Templi, trekking sull’Etna, immersioni nelle Isole Eolie, degustazioni di vini nelle campagne dell’Etna.
+
+                        </p>
+                        <button>
+                            <a href="./Sicilia.html">Scopri di più</a>
+                        </button>
+                    </div>
+                    <div class="colonna1">
+                        <div>
+                            <img class="img_regione" src="assets/img/image agenzia italiana di viaggi/Sicilia/Taormina/jonathan-skule-vEsPPka4m4Q-unsplash.jpg" alt="Italy.image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VENETO -->
+    <section class="offerta">
+        <div class="sovrapposizione">
+            <div class="contenuto">
+                <div class="card_1">
+                    <div class="colonna2">
+                        <h2 class="chisono__subtitle">VENETO</h2>
+                        <p>
+                            <strong><b>Storia e Cultura:<br></b></strong> Il Veneto è ricco di storia, con Venezia come centro indiscusso del Rinascimento e dell’arte. La Basilica di San Marco e il Palazzo Ducale rappresentano la gloria della Serenissima. Verona, la città di Romeo e Giulietta, conserva un anfiteatro romano perfettamente conservato.
+                            <br><strong><b>Paesaggi:<br></b></strong> Le Dolomiti Venete, i Colli Euganei e il Lago di Garda offrono una varietà di paesaggi straordinari. Le spiagge del Lido di Venezia e di Jesolo attraggono turisti per il loro fascino balneare.
+                            <br><strong><b>Tradizioni:<br></b></strong> Il Carnevale di Venezia, con le sue maschere e costumi sontuosi, è una delle celebrazioni più famose al mondo. La tradizione enologica del Veneto, con la produzione di Prosecco, Valpolicella e Amarone, è parte integrante della sua cultura.
+                            <br><strong><b>Attività:<br></b></strong> Gite in gondola a Venezia, escursioni nelle Dolomiti, visite ai borghi medievali come Bassano del Grappa, degustazioni di vini nelle colline del Prosecco, visite ai musei e agli edifici storici di Verona e Padova.
+
+                        </p>
+                        <button>
+                            <a href="./Veneto.html">Scopri di più</a>
+                        </button>
+                    </div>
+                    <div class="colonna1">
+                        <div>
+                            <img class="img_regione" src="assets/img/image agenzia italiana di viaggi/Veneto-Venezia/canmandawe-ftTsK4QinMw-unsplash.jpg" alt="Italy.image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRENTINO -->
+    <section class="offerta">
+        <div class="sovrapposizione">
+            <div class="contenuto">
+                <div class="card_1">
+                    <div class="colonna2">
+                        <h2 class="chisono__subtitle">TRENTINO</h2>
+                        <p>
+                            <strong><b>Storia e Cultura:<br></b></strong> Questa regione combina influenze italiane e austriache, visibili nell’architettura di città come Bolzano e Trento, con i suoi castelli medievali e chiese gotiche. Bolzano è famosa per il museo di Ötzi, l'uomo dei ghiacci.
+                           <br> <strong><b>Paesaggi:<br></b></strong> Le Dolomiti, Patrimonio dell’UNESCO, offrono spettacolari scenari montani ideali per escursioni e sport invernali. I laghi di Garda e di Molveno aggiungono fascino con le loro acque cristalline circondate da montagne.
+                            <br><strong><b>Tradizioni:<br></b></strong> Le tradizioni alpine si riflettono nelle feste tipiche come il mercatino di Natale a Bolzano e nelle specialità culinarie come lo speck, i canederli e i vini locali.
+                            <br><strong><b>Attività:<br></b></strong> Sci nelle Dolomiti, escursioni nei parchi naturali, visita a castelli medievali come Castel Thun, gite in barca sui laghi e tour enogastronomici nelle cantine locali.
+
+                        </p>
+                        <button>
+                            <a href="./Trentino.html">Scopri di più</a>
+                        </button>
+                    </div>
+                    <div class="colonna1">
+                        <div>
+                            <img class="img_regione" src="assets/img/image agenzia italiana di viaggi/Trentino-Alto-Adige/Dolomiti/connor-stirling-vfWAYeKye58-unsplash.jpg" alt="Italy.image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- LIGURIA -->
+    <section class="offerta">
+        <div class="sovrapposizione">
+            <div class="contenuto">
+                <div class="card_1">
+                    <div class="colonna2">
+                        <h2 class="chisono__subtitle">LIGURIA</h2>
+                        <p>
+                            <strong><b>Storia e Cultura:<br></b></strong> Genova, antica repubblica marinara, è il centro storico più grande d'Europa, con il suo porto antico e i Palazzi dei Rolli. Le Cinque Terre, cinque borghi incastonati tra mare e montagna, offrono un fascino unico.
+                            <br><strong><b>Paesaggi:<br></b></strong> La Riviera Ligure, con le sue spiagge, i porti naturali e le scogliere a picco sul mare, regala paesaggi da cartolina. Le Cinque Terre e Portofino sono mete simbolo per chi cerca panorami marittimi mozzafiato.
+                            <br><strong><b>Tradizioni:<br></b></strong> La cucina ligure è famosa per il pesto alla genovese e i suoi prodotti a base di basilico e olio d’oliva. Le tradizioni marinare di questa regione sono ancora vive nei piccoli villaggi di pescatori lungo la costa.
+                            <br><strong><b>Attività:<br></b></strong> Trekking sui sentieri delle Cinque Terre, gite in barca lungo la Riviera di Levante, degustazione di piatti tipici nei borghi marittimi, visita all’acquario di Genova.
+
+                        </p>
+                        <button>
+                            <a href="./Liguria.html">Scopri di più</a>
+                        </button>
+                    </div>
+                    <div class="colonna1">
+                        <div>
+                            <img class="img_regione" src="assets/img/image agenzia italiana di viaggi/Liguria/Parco-Nazionale-delle-Cinque-Terre_Spezia/Vernazza/vincenzo-inzone-9p3eEgdNOXo-unsplash.jpg" alt="Italy.image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAMPANIA -->
+    <section class="offerta">
+        <div class="sovrapposizione">
+            <div class="contenuto">
+                <div class="card_1">
+                    <div class="colonna2">
+                        <h2 class="chisono__subtitle">CAMPANIA</h2>
+                        <p>
+                            <strong><b>Storia e Cultura:<br></b></strong> Napoli è il cuore della cultura campana, con il suo centro storico patrimonio UNESCO, le rovine di Pompei ed Ercolano che offrono un’incredibile finestra sull’antichità romana. La Reggia di Caserta rappresenta un capolavoro del barocco italiano.
+                            <br><strong><b>Paesaggi:<br></b></strong> La Costiera Amalfitana, con le sue cittadine pittoresche come Positano, Amalfi e Ravello, è rinomata per le sue scogliere a picco sul mare e le acque cristalline. Il Vesuvio domina l'orizzonte di Napoli, offrendo uno scenario drammatico.
+                            <br><strong><b>Tradizioni:<br></b></strong> La pizza napoletana e la mozzarella di bufala sono icone gastronomiche locali. Feste popolari come la festa di San Gennaro a Napoli celebrano la fede e la cultura locale.
+                            <br><strong><b>Attività:<br></b></strong> Escursioni lungo il Sentiero degli Dei, gite in barca lungo la Costiera Amalfitana, visita agli scavi archeologici di Pompei e al Vesuvio, relax sulle spiagge di Positano.
+
+                        </p>
+                        <button>
+                            <a href="./Campania.html">Scopri di più</a>
+                        </button>
+                    </div>
+                    <div class="colonna1">
+                        <div>
+                            <img class="img_regione" src="assets/img/image agenzia italiana di viaggi/Campania/Salerno/Positano - Costiera Amalfitana/yoosun-won-CPrlIQJCibY-unsplash.jpg" alt="Italy.image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- DESTINAZIONI SEZIONE CARROSELLO-->
+	<section class="location-carousel" id="destinazioni">
+		<!-- ELEMENTO TESTUALE-->
+		<div class="title">
+			<h2>Altre <strong> Destinazioni</strong></h2>
+		</div>
+
+		<!-- ELEMENTO CARROSELLO-->
+		<div class="carosello">
+            <div class="carosello-item">
+                <a href="./Sicilia.html" class="h-full block">
+                    <figure>
+                        <img loading="lazy" decoding="async" width="1024" height="512"
+                            src="./assets/img/image agenzia italiana di viaggi/Sicilia/Taormina/jonathan-skule-vEsPPka4m4Q-unsplash.jpg"
+                            class="attachment-large size-large wp-post-image" alt="Taormina, Sicilia">
+                        <img decoding="async" width="340" height="394"
+                            src="./assets/img/image agenzia italiana di viaggi/altro/Italy-Map-Sicilia.svg"
+                            class="attachment-large size-large" alt="" data-skip-lazy="1" loading="lazy">
+                        <div class="regione">
+                            <p class="h6 text-gold">Destinazione</p>
+                            <h3>Sicilia</h3>
+                        </div>
+                    </figure>
+                </a>
+            </div>
+            <div class="carosello-item">
+                <a href="./Veneto.html" class="h-full block">
+                    <figure>
+                        <img loading="lazy" decoding="async" width="1024" height="683"
+                            src="./assets/img/image agenzia italiana di viaggi/Veneto-Venezia/canmandawe-ftTsK4QinMw-unsplash.jpg"
+                            class="attachment-large size-large wp-post-image" alt="Venezia">
+                        <img decoding="async" width="340" height="394"
+                            src="./assets/img/image agenzia italiana di viaggi/altro/Italy-Map-Veneto.svg"
+                            class="attachment-large size-large" alt="" data-skip-lazy="1" loading="lazy">
+                        <div class="regione">
+                            <p>Destinazione</p>
+                            <h3>Veneto</h3>
+                        </div>
+                    </figure>
+                </a>
+            </div>
+            <div class="carosello-item">
+                <a href="./Trentino.html" class="h-full block">
+                    <figure>
+                        <img loading="lazy" decoding="async" width="1024" height="682"
+                            src="./assets/img/image agenzia italiana di viaggi/Trentino-Alto-Adige//Dolomiti/connor-stirling-vfWAYeKye58-unsplash.jpg"
+                            class="attachment-large size-large wp-post-image" alt="Dolomiti, Trentino-Alto-Adige"
+                            srcset="./assets/img/image agenzia italiana di viaggi/felipe-simo-yJaUPqul8gs-unsplash.jpg?strip=all&amp;lossy=1&amp;sharp=1&amp;w=1920&amp;ssl=1 1920w""
+                            sizes="(max-width: 1024px) 100vw, 1024px" draggable="false"
+                            ondragstart="return false;"> <img decoding="async" width="340"
+                            height="394"
+                            src="./assets/img/image agenzia italiana di viaggi/altro/Italy-Map-Trentino.Alto.Adige.svg"
+                            class="attachment-large size-large" alt="" data-skip-lazy="1"
+                            loading="lazy" draggable="false" ondragstart="return false;">
+                        <div class="regione">
+                            <p>Destinazione</p>
+                            <h3>Trentino</h3>
+                        </div>
+                    </figure>
+                </a>
+            </div>
+            <div class="carosello-item">
+                <a href="./Liguria.html" class="h-full block">
+                    <figure>
+                        <img loading="lazy" decoding="async" width="1024" height="512"
+                            src="./assets/img/image agenzia italiana di viaggi/Liguria/Parco-Nazionale-delle-Cinque-Terre_Spezia/Vernazza/vincenzo-inzone-9p3eEgdNOXo-unsplash.jpg"
+                            class="attachment-large size-large wp-post-image" alt="Vernazza Parco-Nazionale-delle-Cinque-Terre, Spezia - Liguria"
+                            srcset="./assets/img/image agenzia italiana di viaggi/dorian-mongel-gVwFedcc1rY-unsplash.jpg?strip=all&amp;lossy=1&amp;sharp=1&amp;w=1920&amp;ssl=1 1920w""
+                            sizes="(max-width: 1024px) 100vw, 1024px" draggable="false"
+                            ondragstart="return false;"> <img decoding="async" width="340"
+                            height="394"
+                            src="./assets/img/image agenzia italiana di viaggi/altro/Italy-Map-Liguria.svg"
+                            class="attachment-large size-large" alt="" data-skip-lazy="1"
+                            loading="lazy" draggable="false" ondragstart="return false;">
+                        <div class="regione">
+                            <p>Destinazione</p>
+                            <h3>Liguria</h3>
+                        </div>
+                     </figure>
+                </a>
+            </div>
+            <div class="carosello-item">
+                <a href="./Campania.html" class="h-full block">
+                    <figure class="p-12 h-full">
+                        <img decoding="async" width="1024" height="683"
+                            src="./assets/img/image agenzia italiana di viaggi/Campania/Salerno/Positano - Costiera Amalfitana/yoosun-won-CPrlIQJCibY-unsplash.jpg"
+                            class="attachment-large size-large wp-post-image"
+                            alt="Costiera Amalfitana, Positano - Campania"
+                            srcset="./assets/img/image agenzia italiana di viaggi/federico-di-dio-photography-Zw_CMLoNILg-unsplash.jpg?strip=all&amp;lossy=1&amp;sharp=1&amp;w=1920&amp;ssl=1 1920w""
+                            sizes="(max-width: 1024px) 100vw, 1024px" draggable="false"
+                            ondragstart="return false;"> <img decoding="async" width="340"
+                            height="394"
+                            src="./assets/img/image agenzia italiana di viaggi/altro/Italy-Map-Campania.svg"
+                            class="attachment-large size-large" alt="" data-skip-lazy="1"
+                            draggable="false" ondragstart="return false;">
+                        <div class="regione">
+                            <p>Destinazione</p>
+                            <h3>Campania</h3>
+                        </div>
+                    </figure>
+                </a>
+            </div>
+        </div>
+	</section>
+</main>
+
+<!--=============== FOOTER ===============-->
+        <footer class="footer">
+            <div class="footer__container container grid">
+                <!-- <a href="./index.html" class="footer__logo">
+                    <img src="../assets/img/LOGO-B.png" alt="Logo Footer">
+                </a> -->
+                <div class="logo" alt="Logo">
+                    <a href="./index.html">
+                        <img src="./assets/img/LOGO-B.png">
+                    </a>
+                </div>
+
+                <div class="footer__content_info">
+                    <h3>Informazioni</h3>
+                    <p>
+                        Punto di riferimento per chi desidera vivere esperienze indimenticabili alla scoperta 
+                        delle meraviglie italiane. Con anni di esperienza nel settore turistico, siamo orgogliosi 
+                        di offrire un servizio personalizzato e attento ai dettagli, garantendo vacanze su misura 
+                        per ogni tipo di viaggiatore.
+                    </p>
+                </div>
+
+                <div class="footer__content_destinazioni">
+                        <ul>
+                            <h3>Destinazioni</h3>
+                            <li>
+                                <a href="./Sicilia.html">Sicilia</a></li>
+                            <li>
+                                <a href="./Veneto.html">Veneto</a>
+                            </li>
+                            <li>
+                                <a href="./Trentino.html">Trentino</a>
+                            </li>
+                            <li>
+                                <a href="./Liguria.html">Liguria</a>
+                            </li>
+                            <li>
+                                <a href="./Campania.html">Campania</a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+
+            <p class="footer__copy" target="_blank"> 
+                &#169; DarioCaramagno. All right reserved
+            </p>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-s-line"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="./main.js"></script>
+
+
+
+        <!--=============== RESPONSIVE IMAGE CAROSELLO JS ===============-->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

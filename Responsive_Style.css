@@ -1,0 +1,464 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== RESPONSIVE MEDIA QUERIES ===============*/
+
+/* PER DISPOSITIVI MOLTO PICCOLI */
+@media screen and (max-width: 340px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+  .section__title {
+    font-size: var(--big-font-size);
+  }
+  .chisono__img {
+    width: 20px;
+    top: -13rem;
+  }
+  .chisono__title {
+    top: -4rem;
+    font-size: var(--bigger-font-size);
+  }
+  .chisono__data {
+    padding-top: 1rem;
+  }
+  .chisono__description {
+    font-size: .813rem;
+  }
+
+}
+
+
+/* PER DISPOSITIVI PICCOLI */
+@media screen and (max-width: 576px) {
+  .chisono__container {
+    grid-template-columns: .8fr 1fr;
+  }
+
+  .chisono__img {
+    width: 600px;
+  }
+
+  /*offerta versione mobile allineato a sx*/
+  .contenuto{
+    padding: 2px 2rem 120px!important;
+  }
+
+  /* Versione mobile allineato a sx*/
+  .thumbnail{
+    justify-content: start;
+}
+
+.footer__container.container.grid {
+  display: flow-root;
+}
+
+.slider .list .item .content h2{
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--colore-testo);
+}
+
+.arrows{
+    top: 10%;
+}
+
+#form-div{
+  left: 3%;
+  margin-right: 3%;
+  width: 88%;
+  margin-left: 0;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.colonna1_testo {
+  text-align: center;
+}
+}
+
+
+
+
+/*Sezione Offerta*/
+@media (max-width: 1260px) {
+  .card_1 {
+      display: flex;
+      gap: 0px;
+      width: 100vw;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .contenuto {
+    position: relative;
+    z-index: 1;
+    padding: 0rem 0rem 0rem;
+    backdrop-filter: brightness(0.4) !important;
+    background-image: linear-gradient(to top, var(--colore-sfondo) 20%, transparent);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    width: 100vw;
+}
+}
+
+
+
+
+
+
+
+/* Versione mobile allineato a sx*/
+/* @media screen and (max-width: 678px) {
+  .thumbnail{
+      justify-content: start;
+  }
+
+  .footer__container.container.grid {
+    display: flow-root;
+}
+
+  .slider .list .item .content h2{
+      font-size: 40px;
+      font-weight: 900;
+      color: var(--colore-testo);
+  }
+
+  .arrows{
+      top: 10%;
+  }
+} */
+
+/*=============== TEST RESPONSIVE HAMBURGER MENU ===============*/
+/* Media query per Hamburger menu - dispositivi mobili */
+@media (max-width: 768px) {
+  .nav .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: var(--colore-sfondo); /* Sfondo del menu */
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px; /* Aggiungi padding per un po' di spazio interno */
+  }
+
+  /* .hamburger {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      left: 35%;
+  } */
+
+    .hamburger {
+        /* display: block; */
+        /* display: flex; */
+        position: relative;
+        padding: 0px !important;
+        align-items: center;
+        /* width: 40vw; */
+        /* top: 28px; */
+        left: 25vw;
+        /* bottom: 37%; */
+        display: grid;
+        margin: 0;
+        /* gap: 40px; */
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: start;
+        align-content: space-around;
+    }
+
+
+  /* Mostra il menu quando il checkbox è selezionato */
+  .nav-toggle:checked + .hamburger + .menu {
+      display: flex;
+      margin-top: 20px;
+  }
+
+  /* Colore dei link nel menu hamburger quando è attivo */
+  .nav .nav__link:hover {
+    color: var(--colore-link); 
+    padding: 10px 0; 
+  }
+
+  /* Cambia l'icona quando il checkbox è selezionato */
+  .nav-toggle:checked + .hamburger #hamburger-menu-icon {
+    display: none;
+}
+
+.nav-toggle:checked + .hamburger #hamburger-close-icon {
+    display: block;
+}
+
+header .logo {
+  /* position: absolute; */
+  display: flex;
+  max-width: 38vw;
+}
+
+.ricerca {
+  /*top: 80px;
+  */width: 30%;
+  top: 88vh;
+  transition: opacity 0.3s;
+  transform: translateX(50%);
+  z-index: 9999;
+}
+
+.ricerca .search {
+  /* left: -40px; */
+  /* background-color: var(--colore-pulsante); */
+  /* background-color: rgba(255, 145, 0, 100%); */
+  /* top: 84vh; */
+  /* box-shadow: 0 0 25px 0 #ffeebd;, 0 20px 25px 0 rgba(0, 0, 0, 0.2); */
+  box-shadow:  8px 12px 12px -12px rgb(253, 210, 141) inset, 1px 1px 20px 20px rgba(153, 130, 100, 1) inset;
+}
+
+.ricerca.hidden {
+  opacity: 0;
+  pointer-events: none; /* Impedisce interazioni quando nascosto */
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============== BASE MOBILE ===============*/
+
+/*PER DISPOSITIVI DI MEDIA GRANDEZZA*/
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+  .section {
+    /* padding: 0rem 4rem 2rem 4rem; */
+    padding: 0rem 0rem 4rem;
+    margin-bottom: 20%;
+    }
+
+  .nav__menu {
+    position: fixed;
+    background-color: var(--colore-sfondo);
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding: 4rem 0 3rem;
+    transition: .4s;
+  }
+  .chisono__img {
+    left: 0;
+    top: 4rem;
+}
+  .carosello-item {
+      width: 100%;
+  }
+
+  .row {
+  display: flex;
+  flex-wrap: wrap!important;
+}
+  .card_1 {
+    display: flex;
+    gap: 0px;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px !important;
+}
+  .contenuto {
+    filter: drop-shadow(2px px 1px black) !important;
+    position: relative;
+    z-index: 1;
+    padding: 0rem 0rem 0rem;
+    backdrop-filter: brightness(0.6);
+    background-image: linear-gradient(to top, var(--colore-sfondo) 20%, transparent);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    width: 100vw;
+}
+
+.container {
+  /* width: 94%; */
+  width: calc(100% - 1.5rem);
+  max-width: none;
+  margin: auto;
+  padding: 40px;
+  width: 10p;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+
+
+/*versione mobile slider allineato a sx*/
+  .slider .list .item .content {
+    position: inherit;
+    left: 10%;
+    top: 30%;
+    /* width: 60vh; */
+    z-index: 1;
+    max-width: 80%;
+    display: flow;
+    flex-direction: center;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+
+h1, h2, h3 {
+  color: var(--colore-titolo);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1);
+  padding: 0px 0px 10px;
+}
+
+/* figure::after{
+  opacity: 1;
+  backdrop-filter: brightness(0.2);
+  width: 100%;
+  height: auto;
+} */
+
+/* Stili per l'elemento .regione */
+.regione {
+  position: absolute; /* Cambiato per rendere l'elemento sovrapposto */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  padding: 40px;
+  margin: 0;
+  backdrop-filter: brightness(0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Applicare gli stili quando il cursore è sopra il carosello */
+.location-carousel .regione {
+  opacity: 1;
+}
+
+/* Spazio footer dopo info - versione mobile*/
+.footer__content_info {
+  /* width: max-content;*/
+  margin-bottom: 20%;
+}
+
+}
+
+
+
+
+
+
+/* PER DISPOSITIVI DI LARGHEZZA MEDIA GRANDE */
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section#chisiamo {
+    height: 44vw;
+  }
+
+  .chisono__img {
+    width: 600px;
+    top: -4rem;
+    align-content: flex-start;
+    float: inline-end;
+    position: relative;
+  }
+  .chisono__title {
+    top: -5rem;
+    left: 3.5rem;
+  }
+  .chisono__description {
+    padding-right: 5rem;
+  }
+  .footer__container {
+    padding-top: 3rem;
+  }
+
+/* LARGHEZZA IMG CAROSELLO */
+  .location-carousel > img {
+      opacity: 1;
+  }
+
+  .location-carousel .carousel-col {
+      width: 72%;
+  }
+
+  .location-carousel .nav-col {
+      padding-bottom: max(6rem, 6vw);
+  }
+
+  .location-carousel .carosello {
+      width: 120%;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
