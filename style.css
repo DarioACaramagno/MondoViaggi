@@ -686,11 +686,14 @@ svg{
 #paragrafo_hero{
   /* width: 500px;
   text-align: center; */
-  width: calc(80% - 5rem);
+
+  /* width: calc(80% - 5rem); */
   text-align: center;
   align-items: center;
   position: relative;
   margin: auto;
+  width: 78%;
+  max-width: 70vw;
 }
 
 /* h2.testo_hero {
@@ -754,7 +757,7 @@ svg{
 .chisono__title {
   top: -4rem;
   left: 1rem;
-  line-height: 6rem;
+  line-height: 2rem;
   /* font-size: var(--biggest-font-size); */
   background: var(--text-gradient);
   color: transparent;

@@ -34,6 +34,7 @@
     font-size: 1.125rem;
     align-content: center;
   }
+
 }
 
 
@@ -226,7 +227,7 @@ header .logo {
 .ricerca {
   /*top: 80px;
   */width: 30%;
-  top: 88vh;
+  top: 85vh;
   transition: opacity 0.3s;
   transform: translateX(50%);
   z-index: 9999;
@@ -338,6 +339,10 @@ p.Sottotitolo_hero{
   max-width: calc(100% - 0rem);
 }
 
+#img_mobile{
+  flex-direction: column-reverse;
+}
+
   .card_1 {
     display: flex;
     gap: 0px;
@@ -345,7 +350,6 @@ p.Sottotitolo_hero{
     flex-direction: column;
     align-items: center;
     padding: 30px !important;
-    flex-direction: column-reverse;
 }
   .contenuto {
     filter: drop-shadow(2px px 1px black) !important;
