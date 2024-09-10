@@ -29,6 +29,11 @@
     font-size: .813rem;
   }
 
+  #paragrafo_hero{
+    display: table-cell;
+    font-size: 1.125rem;
+    align-content: center;
+  }
 }
 
 
@@ -50,6 +55,7 @@
   /* Versione mobile allineato a sx*/
   .thumbnail{
     justify-content: start;
+    top: 70%;
 }
 
 .footer__container.container.grid {
@@ -57,9 +63,10 @@
 }
 
 .slider .list .item .content h2{
-    font-size: calc(5rem - 1rem);
+    font-size: calc(4rem - 80%);
     font-weight: 900;
     color: var(--colore-titolo);
+    letter-spacing: 5px;
 }
 
 .arrows{
@@ -275,14 +282,23 @@ header .logo {
     padding: 4rem 0 3rem;
     transition: .4s;
   }
+
+  .submenu{
+    position: relative;
+  }
+
   .chisono__img {
     left: 0;
     top: 4rem;
 }
 
+.chisono__title-description {
+  width: 80vw;
+}
+
 .chisono__subtitle {
   /* font-size: var(--big-font-size); */
-  font-size: calc(3rem - 60%);
+  font-size: calc(3rem - 80%);
   /* margin-bottom: var(--mb-2-5); */
 }
 
@@ -301,6 +317,20 @@ header .logo {
   margin-top: 0;
   position: relative;
   /* margin-bottom: 12rem; */
+}
+
+.slider .list .item .content p:nth-child(1){
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  /* width: 50vw;
+  margin: auto; */
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+}
+
+p.Sottotitolo_hero{
+  font-size: 1.125rem;
+  display: initial;
 }
 
 .img_regione {

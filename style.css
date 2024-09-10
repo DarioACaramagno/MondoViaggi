@@ -839,7 +839,7 @@ svg{
 
 /*Descrizione card*/
 .card__subtitle {
-font-size: calc(4rem - 80%);
+font-size: calc(3rem - 80%);
 }
 
 .card_1 {
