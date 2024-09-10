@@ -2,69 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 /*=============== RESPONSIVE MEDIA QUERIES ===============*/
-/*=============== VARIABLES CSS ===============*/
-:root {
-  --header-height: 3rem;
-  /*========== Colors ==========*/
-  --hue-color: 206;
-  --colore-sfondo: #0f0f10;
-  --colore-sfondo-pulsante-hover: hsl(var(--colore-sfondo), 4%, 8%);
-  --colore-titolo: hsl(44.83deg 100% 87.11%);
-  --colore-testo: hsl(72.52deg 100% 98.53%);
-  --colore-bianco: #FFF;
-  --Colore-pulsante: rgba(255, 238, 189, 0.1);
-  --colore-link: #ffeebd;
-  --sfondo-scrollup: hsl(var(--colore-sfondo), 4%, 10%);
-  --text-gradient: linear-gradient(hsl(var(--hue-color), 4%, 24%), hsl(var(--hue-color), 4%, 8%));
-  /* --gradiente-testo: linear-gradient(hsl(var(--colore-sfondo), 4%, 24%), hsl(var(--colore-sfondo), 4%, 8%)); */
-
-  /*========== Font and typography ==========*/
-  --body-font: 'Poppins', sans-serif;
-  --biggest-font-size: 5rem;
-  --bigger-font-size: 3.5rem;
-  --big-font-size: 2.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1.125rem;
-  --normal-font-size: .938rem;
-  /*========== Font weight ==========*/
-  --font-medium: 500;
-  --font-semi-bold: 600;
-  /*========== Margine Bottom ==========*/
-  --mb-1: 1rem;
-  --mb-1-5: 1.5rem;
-  --mb-2-5: 2.5rem;
-}
-
-@media screen and (min-width: 968px) {
-  :root {
-    --biggest-font-size: 7.5rem;
-    --bigger-font-size: 4.5rem;
-    --big-font-size: 4rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -113,7 +50,6 @@
   /* Versione mobile allineato a sx*/
   .thumbnail{
     justify-content: start;
-    top: 24rem;
 }
 
 .footer__container.container.grid {
@@ -123,7 +59,7 @@
 .slider .list .item .content h2{
     font-size: 40px;
     font-weight: 900;
-    color: var(--colore-testo);
+    color: var(--colore-titolo);
 }
 
 .arrows{
