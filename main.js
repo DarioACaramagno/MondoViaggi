@@ -1,38 +1,3 @@
-// /*=============== SHOW MENU ===============*/
-//  const navMenu = document.getElementById('nav-menu'),
-//      navToggle = document.getElementById('nav-toggle'),
-//       navClose = document.getElementById('nav-close')
-
-// // /*===== MENU SHOW =====*/
-// // /* Validate if constant exists */
-//  if(navToggle){
-//      navToggle.addEventListener('click', () =>{
-//          navMenu.classList.add('show-menu')
-//      })
-//  }
-
-// // /*===== MENU HIDDEN =====*/
-// // /* Validate if constant exists */
-//  if(navClose){
-//      navClose.addEventListener('click', () =>{
-//          navMenu.classList.remove('show-menu')
-//      })
-//  }
-
-// // /*=============== REMOVE MENU MOBILE ===============*/
-//  const navLink = document.querySelectorAll('.nav__link')
-
-//  function linkAction(){
-//      const navMenu = document.getElementById('nav-menu')
-//      // When we click on each nav__link, we remove the show-menu class
-//      navMenu.classList.remove('show-menu')
-//  }
-//  navLink.forEach(n => n.addEventListener('click', linkAction))
-
-
-
-
-
 
 /*=============== APERTURA E CHIUSURA HAMBURGER MENU ===============*/
 document.addEventListener('DOMContentLoaded', () => {
@@ -44,30 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navToggle.checked = false;
     }));
 });
-
-
-// /*=============== CHANGE BACKGROUND SECTION ===============*/
-// document.addEventListener('DOMContentLoaded', () => {
-//     const sections = document.querySelectorAll('.products.section, .specs');
-
-//     const observer = new IntersectionObserver((entries) => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 entry.target.style.backgroundColor = 'white';
-//                 entry.target.style.color = 'black';
-//                 entry.target.style.transition = '1s ease';
-
-//             } else {
-//                 entry.target.style.backgroundColor = '';
-//                 entry.target.style.color = '';
-//             }
-//         });
-//     }, {
-//         threshold: 0.5 // 50% della sezione deve essere visibile per attivare il cambiamento
-//     });
-
-//     sections.forEach(section => observer.observe(section));
-// });
 
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
@@ -115,7 +56,7 @@ prev.onclick = function(){
 // auto run slider
 let refreshInterval = setInterval(() => {
     next.click();
-}, 10000)
+}, 5000)
 function showSlider(){
     // remove item active old
     let itemActiveOld = document.querySelector('.slider .list .item.active');
@@ -174,60 +115,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*=============== TRANSAZIONE CAROSELLO IN LOOP ===============*/
 document.addEventListener("DOMContentLoaded", function() {
     const carosello = document.querySelector(".carosello");
     const caroselloItems = document.querySelectorAll(".carosello-item");
-    
+
     // Clona tutte le immagini nel carosello
     const numItems = caroselloItems.length;
-    
     for (let i = 0; i < numItems; i++) {
         const clone = caroselloItems[i].cloneNode(true);
         clone.classList.add("clone");
         carosello.appendChild(clone);
     }
-    
+
     let currentIndex = 0;
     const slideWidth = caroselloItems[0].offsetWidth; // Larghezza di un singolo slide
-    
+
     function slideNext() {
         currentIndex++;
         carosello.style.transition = "transform 0.5s ease";
         carosello.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
     }
-    
+
     function slidePrev() {
         currentIndex--;
         carosello.style.transition = "transform 0.5s ease";
         carosello.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
     }
-    
+
     // Aggiungi eventi per gestire il ciclo infinito
     carosello.addEventListener("transitionend", function() {
         if (currentIndex >= numItems) {
@@ -241,8 +156,8 @@ document.addEventListener("DOMContentLoaded", function() {
             carosello.style.transform = `translateX(${-numItems * slideWidth}px)`;
         }
     });
-    
+
     // Avvia l'animazione
-    setInterval(slideNext, 3000); // Cambia slide ogni 3 secondi (modifica il valore come preferisci)
+    setInterval(slideNext, 6000); // Cambia slide ogni 3 secondi (modifica il valore come preferisci)
 });
 
