@@ -179,3 +179,10 @@ function clearErrorMessage() {
     // Nascondi il messaggio di errore quando l'utente modifica l'input
     document.getElementById("errorMessage").style.display = "none";
 }
+
+function checkEnter(event) {
+    // Se l'utente preme il tasto Enter (13 è il codice della chiave "Invio")
+    if (event.keyCode === 13) {
+        searchPage();
+    }
+}

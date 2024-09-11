@@ -4,6 +4,7 @@
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3rem;
+
   /*========== Colors ==========*/
   --hue-color: 206;
   --colore-sfondo: #0f0f10;
@@ -25,6 +26,7 @@
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
   --normal-font-size: .938rem;
+
   /*========== Font weight ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
@@ -73,9 +75,6 @@ body {
 /*GERARCHIA TESTUALE*/
 h1, h2, h3 {
   color: var(--colore-titolo);
-  /* font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
-  margin-bottom: var(--mb-1); */
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -636,11 +635,6 @@ svg{
   max-width: 70vw;
 }
 
-/* h2.testo_hero {
-  width: calc(100% -1rem);
-  text-align: center !important;
-} */
-
 .content {
   text-align: center;
   width: (80% -1rem);
@@ -753,7 +747,12 @@ svg{
   width: 100vw;
 }
 
-/*Griglia Attività - Pagina Servizi*/
+
+
+
+
+
+/*=============== PAGINA SERVIZI - GRIGLIA ATTIVITA' ===============*/
 .card {
   display: flex;
   gap: 120px;
@@ -771,6 +770,8 @@ svg{
 .card__subtitle {
 font-size: calc(3rem - 80%);
 }
+
+
 
 .card_1 {
   display: flex; /* allineo in orizzontale gli elementi della card */
@@ -965,6 +966,15 @@ figure img, figure video {
 
 
 
+
+
+
+
+
+
+
+
+
 /* EFFETTO AFTER IN HOVER SU IMG CAROSELLO */
 @media (hover: hover) {
   .location-carousel .carosello-item a:hover figure > img:not(:nth-child(2)), 
@@ -985,14 +995,6 @@ figure img, figure video {
       opacity: 1;
   }
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -1068,6 +1070,10 @@ figure img, figure video {
   flex-wrap: wrap;
 }
 
+
+
+
+
 /*=============== SCROLL UP ===============*/
 .scrollup {
   position: fixed;
@@ -1075,78 +1081,76 @@ figure img, figure video {
   bottom: -20%;
   display: flex;
   background-color: var(--sfondo-scrollup);
-  border-radius: .25rem;
-  padding: .45rem;
-  opacity: 9;
+  border-radius: 0.25rem;
+  padding: 0.45rem;
+  opacity: 0.9; /* corretto da 9 a 0.9 per un valore valido di opacity */
   z-index: 10;
-  transition: .4s;
+  transition: bottom 0.4s; /* specificato il tipo di transizione */
 }
 
-/* Show Scroll Up*/
+/* Show Scroll Up */
 .show-scroll {
   bottom: 5rem;
 }
 
 
 
-/*PAGINCA CONTATTI - FORM DI PRENOTAZIONE*/
+
+
+
+
+/*=============== PAGINCA CONTATTI - FORM DI PRENOTAZIONE ===============*/
 .colonna1_testo {
   text-align: center;
 }
 
 .colonna2_form {
   max-width: 600px;
-  width: 1440px;
+  width: 100%; /* usa 100% per evitare valori fissi */
 }
 
 .feedback-input {
-	color:#949494;
-  font-weight:500;
-	font-size: 18px;
-	border-radius: 0;
-	line-height: 22px;
-	/* background-color: #fbfbfb; */
+  color: #949494;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 0;
+  line-height: 22px;
   backdrop-filter: blur(20px);
   background: transparent;
-	padding: 13px 13px 13px 13px;
-	/* margin-bottom: 10px; */
-	width:100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
-  border: 3px solid rgba(0,0,0,0);
-  align-items: center;
+  padding: 13px;
+  width: 100%;
+  box-sizing: border-box; /* un solo valore per tutti i vendor prefix */
+  border: 3px solid transparent; /* usato transparent anziché rgba(0,0,0,0) */
   box-shadow: 0 0 2px 0 #ffeebd;
   margin-bottom: 20px;
   background-color: var(--colore-sfondo);
 }
 
 textarea {
-    width: 100%;
-    height: 150px;
-    line-height: 150%;
-    resize:vertical;
+  width: 100%;
+  height: 150px;
+  line-height: 1.5; /* usa una proporzione più chiara */
+  resize: vertical;
 }
 
 input:hover, textarea:hover,
 input:focus, textarea:focus {
-	background-color:var(--colore-sfondo);
-  color: var(--colore-testo)
+  background-color: var(--colore-sfondo);
+  color: var(--colore-testo);
 }
 
 fieldset {
-  align-items: center;
   display: flex;
   justify-content: center;
   gap: 20px;
   border: none;
-  
 }
 
-/*pagina singole regione - destinazioni*/
-.img_regione{
-  /* max-width: 160%; */
+
+
+
+/*=============== PAGINA DESTINAZIONI - SINGOLE REGIONI ===============*/
+.img_regione {
   max-width: calc(160% - 5rem);
   height: auto;
   object-fit: cover;
