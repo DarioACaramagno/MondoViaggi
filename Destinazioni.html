@@ -8,71 +8,81 @@
         <meta name="description" content="Una raccolta delle località italiane da visitare">
         <meta name="keywords" content="località, viaggi, vacanze, italia">
         <meta name="author" content="Dario Caramagno">
+
+        <!-- Preload critical resources for performance -->
+        <link rel="preload" href="./assets/img/LOGO-B.png" as="image" type="image/png">
+        <link rel="preload" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" as="style">
+
+        <!-- Stylesheets -->
         <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" href="./Responsive_Style.css">
 
         <!--=============== REMIX ICONS ===============-->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" media="print" onload="this.media='all'">
     </head>
 
 
     <body>
     <!--=============== HEADER ===============-->
-    <header id="header">
-        <nav class="nav container">
-            <div class="logo" alt="Logo">
-                <a href="./index.html">
-                    <img src="./assets/img/LOGO-B.png" alt="Logo">
+    <header id="header" role="banner">
+        <nav class="nav container" role="navigation" aria-label="Menu principale">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="./index.html" aria-label="Homepage">
+                    <img src="./assets/img/LOGO-B.png" alt="Logo" width="140" height="40">
                 </a>
             </div>
 
-            <div>
-                <!-- controlla la visibilità del menu. -->
-                <input type="checkbox" id="nav-toggle" class="nav-toggle">
-                <!-- Se il menu viene cliccato, menu cambia lo stato del checkbox. -->
-                <label for="nav-toggle" class="hamburger">
-                    <!-- Icona del menu hamburger -->
-                     <i class="ri-menu-line"></i>
-                </label>
+            <!-- Menu Hamburger -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Apri menu">
+            <label for="nav-toggle" class="hamburger" aria-label="Icona menu">
+                <i class="ri-menu-line"></i>
+            </label>
 
+            <!-- Menu di navigazione -->
+            <ul class="menu" id="nav-menu" role="menubar">
+                <li class="nav__item">
+                    <a href="./index.html" class="nav__link" role="menuitem">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./Agenzia.html" class="nav__link" role="menuitem">Chi siamo</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./Destinazioni.html" class="nav__link active-link" role="menuitem" aria-haspopup="true" aria-expanded="false">Destinazioni</a>
+                    <ul class="submenu" role="menu" aria-label="Sottomenu Destinazioni">
+                        <li class="nav__item">
+                            <a href="./Sicilia.html" class="nav__link" role="menuitem">Sicilia</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./Veneto.html" class="nav__link" role="menuitem">Veneto</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./Trentino.html" class="nav__link" role="menuitem">Trentino</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./Liguria.html" class="nav__link" role="menuitem">Liguria</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./Campania.html" class="nav__link" role="menuitem">Campania</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="./Attività.html" class="nav__link" role="menuitem">Servizi</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./contatti.html" class="nav__link" role="menuitem">Contatti</a>
+                </li>
+            </ul>
 
-                <ul class="menu" id="nav-menu">
-                    <li class="nav__item">
-                        <a href="./index.html" class="nav__link">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="./Agenzia.html" class="nav__link">Chi siamo</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="./Destinazioni.html" class="nav__link active-link">Destinazioni</a>
-                        <ul class="submenu">
-                            <li class="nav__item">
-                              <a href="./Sicilia.html" class="nav__link">Sicilia</a>
-                              <a href="./Veneto.html" class="nav__link">Veneto</a>
-                              <a href="./Trentino.html" class="nav__link">Trentino</a>
-                              <a href="./Liguria.html" class="nav__link">Liguria</a>
-                              <a href="./Campania.html" class="nav__link">Campania</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="./Attività.html" class="nav__link">Servizi</a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="./contatti.html" class="nav__link">Contatti</a>
-                    </li>
-                </ul>
-
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                </div>
+            <!-- Pulsante di chiusura del menu -->
+            <div class="nav__close" id="nav-close" aria-label="Chiudi menu">
+                <i class="ri-close-line"></i>
             </div>
-            <!-- Icona deI RICERCA -->
-            <div class="ricerca" id="ricerca">
-                <input type="text" placeholder="Cerca...">
-                <div class="search"></div>
+
+            <!-- Barra di ricerca -->
+            <div class="ricerca" id="ricerca" role="search">
+                <input type="search" placeholder="Cerca..." aria-label="Cerca nel sito">
             </div>
         </nav>
     </header>
@@ -85,7 +95,7 @@
 
 <main class="main">
     <!-- SLIDER CAROUSEL -->
-    <section class="slider">
+    <section class="slider" aria-label="Destinazioni principali">
         <!-- list Items -->
         <div class="list">
             <div class="item active">
@@ -145,39 +155,29 @@
         <div class="thumbnail">
             <div class="item active">
                 <img src="./assets/img/IMG SITO TO WEBP/karol-chomka-9sj3HVs9KT0-unsplash.webp" alt="Acitrezza">
-                <div class="content">
-                    Acitrezza
-                </div>
+                <div class="content">Acitrezza</div>
             </div>
             <div class="item">
                 <img src="./assets/img/IMG SITO TO WEBP/clay-banks-M4n71zrXQ8c-unsplash.webp" alt="Venezia">
-                <div class="content">
-                    Venezia
-                </div>
+                <div class="content">Venezia</div>
             </div>
             <div class="item">
                 <img src="./assets/img/IMG SITO TO WEBP/giuseppe-mondi-K0VLuATuQ9o-unsplash.webp" alt="Trento">
-                <div class="content">
-                    Trento
-                </div>
+                <div class="content">Trento</div>
             </div>
             <div class="item">
                 <img src="./assets/img/IMG SITO TO WEBP/anders-jilden-cYrMQA7a3Wc-unsplash.webp" alt="Vernazza">
-                <div class="content">
-                    Vernazza
-                </div>
+                <div class="content">Vernazza</div>
             </div>
             <div class="item">
                 <img src="./assets/img/IMG SITO TO WEBP/silvia-trigo-kAE6Kd7W2UA-unsplash.webp" alt="Positano">
-                <div class="content">
-                    Positano
-                </div>
-            </div><!-- button arrows -->
-        <div class="arrows">
-            <button id="prev"><</button>
-            <button id="next">></button>
-        </div>
-
+                <div class="content">Positano</div>
+            </div>
+            <!-- button arrows -->
+            <div class="arrows">
+                <button id="prev" aria-label="Slide precedente"><</button>
+                <button id="next" aria-label="Slide successiva">></button>
+            </div>
         </div>
     </section>
 
@@ -205,7 +205,7 @@
                     <br><br><br>
                     <div class="colonna1">
                         <div>
-                            <img class="img_regione" src="assets/img/image agenzia italiana di viaggi/Sicilia/Taormina/jonathan-skule-vEsPPka4m4Q-unsplash.jpg" alt="Italy.image">
+                            <img class="img_regione" src="assets/img/IMG SITO TO WEBP/jonathan-skule-vEsPPka4m4Q-unsplash.webp" alt="Italy.image">
                         </div>
                     </div>
                 </div>
@@ -234,7 +234,7 @@
                     <br><br><br>
                     <div class="colonna1">
                         <div>
-                            <img class="img_regione" src="assets/img/image agenzia italiana di viaggi/Veneto-Venezia/canmandawe-ftTsK4QinMw-unsplash.jpg" alt="Italy.image">
+                            <img class="img_regione" src="./assets/img/IMG SITO TO WEBP/canmandawe-ftTsK4QinMw-unsplash.webp" alt="Italy.image">
                         </div>
                     </div>
                 </div>
@@ -263,7 +263,7 @@
                     <br><br><br>
                     <div class="colonna1">
                         <div>
-                            <img class="img_regione" src="assets/img/image agenzia italiana di viaggi/Trentino-Alto-Adige/Dolomiti/connor-stirling-vfWAYeKye58-unsplash.jpg" alt="Italy.image">
+                            <img class="img_regione" src="assets/img/IMG SITO TO WEBP/connor-stirling-vfWAYeKye58-unsplash.webp" alt="Italy.image">
                         </div>
                     </div>
                 </div>
@@ -293,7 +293,7 @@
                     <br><br><br>
                     <div class="colonna1">
                         <div>
-                            <img class="img_regione" src="assets/img/image agenzia italiana di viaggi/Liguria/Parco-Nazionale-delle-Cinque-Terre_Spezia/Vernazza/vincenzo-inzone-9p3eEgdNOXo-unsplash.jpg" alt="Italy.image">
+                            <img class="img_regione" src="assets/img/IMG SITO TO WEBP/vincenzo-inzone-9p3eEgdNOXo-unsplash.webp" alt="Italy.image">
                         </div>
                     </div>
                 </div>
@@ -322,7 +322,7 @@
                     <br><br><br>
                     <div class="colonna1">
                         <div>
-                            <img class="img_regione" src="assets/img/image agenzia italiana di viaggi/Campania/Salerno/Positano - Costiera Amalfitana/yoosun-won-CPrlIQJCibY-unsplash.jpg" alt="Italy.image">
+                            <img class="img_regione" src="assets/img/IMG SITO TO WEBP/yoosun-won-CPrlIQJCibY-unsplash.webp" alt="Italy.image">
                         </div>
                     </div>
                 </div>
@@ -443,49 +443,35 @@
 </main>
 
 <!--=============== FOOTER ===============-->
-        <footer class="footer">
-            <div class="footer__container container grid">
-                <!-- <a href="./index.html" class="footer__logo">
-                    <img src="../assets/img/LOGO-B.png" alt="Logo Footer">
-                </a> -->
-                <div class="logo" alt="Logo">
-                    <a href="./index.html">
-                        <img src="./assets/img/LOGO-B.png">
-                    </a>
-                </div>
+    <footer class="footer" aria-label="Informazioni sul footer">
+        <div class="footer__container container grid">
+            <a href="./index.html" class="footer__logo" aria-label="Logo">
+                <img src="./assets/img/LOGO-B.png" alt="Logo" width="260" height="50">
+            </a>
 
-                <div class="footer__content_info">
-                    <h3>Informazioni</h3>
-                    <p>
-                        Punto di riferimento per chi desidera vivere esperienze indimenticabili alla scoperta delle meraviglie italiane.
-                    </p>
-                </div>
-
-                <div class="footer__content_destinazioni">
-                        <ul>
-                            <h3>Destinazioni</h3>
-                            <li>
-                                <a href="./Sicilia.html">Sicilia</a></li>
-                            <li>
-                                <a href="./Veneto.html">Veneto</a>
-                            </li>
-                            <li>
-                                <a href="./Trentino.html">Trentino</a>
-                            </li>
-                            <li>
-                                <a href="./Liguria.html">Liguria</a>
-                            </li>
-                            <li>
-                                <a href="./Campania.html">Campania</a>
-                            </li>
-                        </ul>
-                </div>
+            <div class="footer__content_info">
+                <h3>Informazioni</h3>
+                <p>
+                    Punto di riferimento per chi desidera vivere esperienze indimenticabili alla scoperta delle meraviglie italiane.
+                </p>
             </div>
 
-            <p class="footer__copy" target="_blank"> 
-                &#169; DarioCaramagno. All right reserved
-            </p>
-        </footer>
+            <div class="footer__content_destinazioni">
+                <h3>Destinazioni</h3>
+                <ul>
+                    <li><a href="./Sicilia.html">Sicilia</a></li>
+                    <li><a href="./Veneto.html">Veneto</a></li>
+                    <li><a href="./Trentino.html">Trentino</a></li>
+                    <li><a href="./Liguria.html">Liguria</a></li>
+                    <li><a href="./Campania.html">Campania</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="footer__copy"> 
+            &#169; Dario Caramagno. All rights reserved.
+        </p>
+    </footer>
 
         <!--=============== SCROLL UP ===============-->
         <a href="#" class="scrollup" id="scroll-up">

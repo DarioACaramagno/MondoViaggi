@@ -10,7 +10,7 @@
         <meta name="author" content="Dario Caramagno">
 
         <!-- Preload critical resources for performance -->
-        <link rel="preload" href="./assets/img/LOGO-B.png" as="image">
+        <link rel="preload" href="./assets/img/LOGO-B.png" as="image" type="image/png">
         <link rel="preload" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" as="style">
 
         <!-- Stylesheets -->
@@ -18,67 +18,71 @@
         <link rel="stylesheet" href="./Responsive_Style.css">
 
         <!--=============== REMIX ICONS ===============-->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" media="print" onload="this.media='all'">
     </head>
 
 
     <body>
     <!--=============== HEADER ===============-->
     <header id="header" role="banner">
-        <nav class="nav container" role="navigation" aria-label="Menu di navigazione principale">
-            <div class="logo" alt="Logo" aria-label="Homepage">
-                <a href="./index.html" target="_self">
-                    <img src="./assets/img/LOGO-B.png" alt="Logo" width="140px" height="40px">
+        <nav class="nav container" role="navigation" aria-label="Menu principale">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="./index.html" aria-label="Homepage">
+                    <img src="./assets/img/LOGO-B.png" alt="Logo" width="140" height="40">
                 </a>
             </div>
 
-            <div>
-                <!-- controlla la visibilità del menu. -->
-                <input type="checkbox" id="nav-toggle" class="nav-toggle">
-                <!-- Se il menu viene cliccato, menu cambia lo stato del checkbox. -->
-                <label for="nav-toggle" class="hamburger">
-                    <!-- Icona del menu hamburger -->
-                     <i class="ri-menu-line"></i>
-                </label>
+            <!-- Menu Hamburger -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Apri menu">
+            <label for="nav-toggle" class="hamburger" aria-label="Icona menu">
+                <i class="ri-menu-line"></i>
+            </label>
 
+            <!-- Menu di navigazione -->
+            <ul class="menu" id="nav-menu" role="menubar">
+                <li class="nav__item">
+                    <a href="./index.html" class="nav__link active-link" role="menuitem">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./Agenzia.html" class="nav__link" role="menuitem">Chi siamo</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./Destinazioni.html" class="nav__link" role="menuitem" aria-haspopup="true" aria-expanded="false">Destinazioni</a>
+                    <ul class="submenu" role="menu" aria-label="Sottomenu Destinazioni">
+                        <li class="nav__item">
+                            <a href="./Sicilia.html" class="nav__link" role="menuitem">Sicilia</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./Veneto.html" class="nav__link" role="menuitem">Veneto</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./Trentino.html" class="nav__link" role="menuitem">Trentino</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./Liguria.html" class="nav__link" role="menuitem">Liguria</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./Campania.html" class="nav__link" role="menuitem">Campania</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="./Attività.html" class="nav__link" role="menuitem">Servizi</a>
+                </li>
+                <li class="nav__item">
+                    <a href="./contatti.html" class="nav__link" role="menuitem">Contatti</a>
+                </li>
+            </ul>
 
-                <ul class="menu" id="nav-menu">
-                    <li class="nav__item">
-                        <a href="./index.html" class="nav__link active-link">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="./Agenzia.html" class="nav__link">Chi siamo</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="./Destinazioni.html" class="nav__link" role="menuitem" aria-haspopup="true">Destinazioni</a>
-                        <ul class="submenu" role="menu">
-                            <li class="nav__item">
-                              <a href="./Sicilia.html" class="nav__link">Sicilia</a>
-                              <a href="./Veneto.html" class="nav__link">Veneto</a>
-                              <a href="./Trentino.html" class="nav__link">Trentino</a>
-                              <a href="./Liguria.html" class="nav__link">Liguria</a>
-                              <a href="./Campania.html" class="nav__link">Campania</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="./Attività.html" class="nav__link">Servizi</a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="./contatti.html" class="nav__link">Contatti</a>
-                    </li>
-                </ul>
-
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                </div>
+            <!-- Pulsante di chiusura del menu -->
+            <div class="nav__close" id="nav-close" aria-label="Chiudi menu">
+                <i class="ri-close-line"></i>
             </div>
-            <!-- Icona deI RICERCA -->
+
+            <!-- Barra di ricerca -->
             <div class="ricerca" id="ricerca" role="search">
                 <input type="search" placeholder="Cerca..." aria-label="Cerca nel sito">
-                <div class="search"></div>
             </div>
         </nav>
     </header>
@@ -87,182 +91,173 @@
 
 
 
-<main class="main">
-    <!-- SLIDER CAROUSEL -->
-    <section class="slider" aria-label="Destinazioni principali">
-        <!-- list Items -->
-        <div class="list">
-            <div class="item active">
-                <img src="./assets/img/IMG SITO TO WEBP/karol-chomka-9sj3HVs9KT0-unsplash.webp" alt="Acitrezza">
-                <div class="content">
-                    <p>Agenzia di Viaggi Italiana</p>
-                    <a href="./Sicilia.html#ACITREZZA_section">
-                        <h2 class="testo_hero">ACITREZZA</h2>
-                    </a>
-                    <span id="paragrafo_hero">Tra leggenda e realtà, Acitrezza è celebre per i Faraglioni dei Ciclopi, maestosi scogli vulcanici che emergono dal mare.</span>
+    <main class="main">
+        <!-- SLIDER CAROUSEL -->
+        <section class="slider" aria-label="Destinazioni principali">
+            <!-- list Items -->
+            <div class="list">
+                <div class="item active">
+                    <img src="./assets/img/IMG SITO TO WEBP/karol-chomka-9sj3HVs9KT0-unsplash.webp" alt="Acitrezza">
+                    <div class="content">
+                        <p>Agenzia di Viaggi Italiana</p>
+                        <a href="./Sicilia.html#ACITREZZA_section">
+                            <h2 class="testo_hero">ACITREZZA</h2>
+                        </a>
+                        <span id="paragrafo_hero">Tra leggenda e realtà, Acitrezza è celebre per i Faraglioni dei Ciclopi, maestosi scogli vulcanici che emergono dal mare.</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/IMG SITO TO WEBP/clay-banks-M4n71zrXQ8c-unsplash.webp" alt="Venezia">
+                    <div class="content">
+                        <p>Agenzia di Viaggi Italiana</p>
+                        <a href="./Veneto.html#VENEZIA_section">
+                            <h2 class="testo_hero">VENEZIA</h2>
+                        </a>
+                        <span id="paragrafo_hero">Un luogo dove il tramonto dipinge l’acqua d’oro, i profumi avvolgono l’aria e le melodie danzano tra antichi canali senza tempo.</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/IMG SITO TO WEBP/giuseppe-mondi-K0VLuATuQ9o-unsplash.webp" alt="Trento">
+                    <div class="content">
+                        <p>Agenzia di Viaggi Italiana</p>
+                        <a href="./Trentino.html#TRENTO_section">
+                            <h2 class="testo_hero">TRENTO</h2>
+                        </a>
+                        <span id="paragrafo_hero">Tra montagne imponenti e palazzi rinascimentali, si aprono vie lastricate di storia, gusti autentici e panorami che tolgono il fiato a ogni sguardo.</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/IMG SITO TO WEBP/anders-jilden-cYrMQA7a3Wc-unsplash.webp" alt="Vernazza">
+                    <div class="content">
+                        <p>Agenzia di Viaggi Italiana</p>
+                        <a href="./Liguria.html#VERNAZZA_section">
+                            <h2 class="testo_hero">VERNAZZA</h2>
+                        </a>
+                        <span id="paragrafo_hero">Uno dei cinque pittoreschi borghi delle Cinque Terre, situato sulla costa ligure, continua da secoli a catturare l’immaginazione di artisti e viaggiatori.</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/IMG SITO TO WEBP/silvia-trigo-kAE6Kd7W2UA-unsplash.webp" alt="Positano">
+                    <div class="content">
+                        <p>Agenzia di Viaggi Italiana</p>
+                        <a href="./Campania.html#POSITANO_section">
+                            <h2 class="testo_hero">POSITANO</h2>
+                        </a>
+                        <span id="paragrafo_hero">Lasciati guidare dal Sentiero degli Dei e ammira le vedute della Costiera Amalfitana, un’esperienza che offre un contatto diretto con la natura.</span>
+                    </div>
                 </div>
             </div>
-            <div class="item">
-                <img src="./assets/img/IMG SITO TO WEBP/clay-banks-M4n71zrXQ8c-unsplash.webp" alt="Venezia">
-                <div class="content">
-                    <p>Agenzia di Viaggi Italiana</p>
-                    <a href="./Veneto.html#VENEZIA_section">
-                        <h2 class="testo_hero">VENEZIA</h2>
-                    </a>
-                    <span id="paragrafo_hero">Un luogo dove il tramonto dipinge l’acqua d’oro, i profumi avvolgono l’aria e le melodie danzano tra antichi canali senza tempo.</span>
+
+
+            <!-- thumbnail -->
+            <div class="thumbnail">
+                <div class="item active">
+                    <img src="./assets/img/IMG SITO TO WEBP/karol-chomka-9sj3HVs9KT0-unsplash.webp" alt="Acitrezza">
+                    <div class="content">Acitrezza</div>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/IMG SITO TO WEBP/clay-banks-M4n71zrXQ8c-unsplash.webp" alt="Venezia">
+                    <div class="content">Venezia</div>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/IMG SITO TO WEBP/giuseppe-mondi-K0VLuATuQ9o-unsplash.webp" alt="Trento">
+                    <div class="content">Trento</div>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/IMG SITO TO WEBP/anders-jilden-cYrMQA7a3Wc-unsplash.webp" alt="Vernazza">
+                    <div class="content">Vernazza</div>
+                </div>
+                <div class="item">
+                    <img src="./assets/img/IMG SITO TO WEBP/silvia-trigo-kAE6Kd7W2UA-unsplash.webp" alt="Positano">
+                    <div class="content">Positano</div>
+                </div>
+                <!-- button arrows -->
+                <div class="arrows">
+                    <button id="prev" aria-label="Slide precedente"><</button>
+                    <button id="next" aria-label="Slide successiva">></button>
                 </div>
             </div>
-            <div class="item">
-                <img src="./assets/img/IMG SITO TO WEBP/giuseppe-mondi-K0VLuATuQ9o-unsplash.webp" alt="Trento">
-                <div class="content">
-                    <p>Agenzia di Viaggi Italiana</p>
-                    <a href="./Trentino.html#TRENTO_section">
-                        <h2 class="testo_hero">TRENTO</h2>
-                    </a>
-                    <span id="paragrafo_hero">Tra montagne imponenti e palazzi rinascimentali, si aprono vie lastricate di storia, gusti autentici e panorami che tolgono il fiato a ogni sguardo.</span>
+        </section>
+
+
+
+    <!-- INFO SECTION -->
+        <section class="chisono section" aria-label="Informazioni sull'agenzia">
+            <div class="chisono__container container grid">
+                <div class="chisono__data">
+                    <div class="chisono__header">
+                        <h1 class="chisono__title">ITALY</h1>
+                        <h2 class="chisono__subtitle"> Viaggia alla scoperta <br> delle bellezze italiane</h2>
+                    </div>
+
+                    <div class="chisono__footer">
+                        <h3 class="chisono__title-description"> Esplora l'Italia autentica con i nostri viaggi su misura</h3>
+                        <p class="chisono__description">Agenzia di viaggi esperta nel creare esperienze di viaggio uniche e personalizzate. La nostra missione è quella di offrire un servizio di alta qualità che permetta di vivere un viaggio indimenticabile, in linea con i desideri e i propri interessi.
+                        </p>
+                        <button>
+                        <a href="./Destinazioni.html">Scopri le destinazioni</a>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/img/image agenzia italiana di viaggi/altro/Italy-Map.svg" alt="Italy.image" class="chisono__img">
                 </div>
             </div>
-            <div class="item">
-                <img src="./assets/img/IMG SITO TO WEBP/anders-jilden-cYrMQA7a3Wc-unsplash.webp" alt="Vernazza">
-                <div class="content">
-                    <p>Agenzia di Viaggi Italiana</p>
-                    <a href="./Liguria.html#VERNAZZA_section">
-                        <h2 class="testo_hero">VERNAZZA</h2>
-                    </a>
-                    <span id="paragrafo_hero">Uno dei cinque pittoreschi borghi delle Cinque Terre, situato sulla costa ligure, continua da secoli a catturare l’immaginazione di artisti e viaggiatori.</span>
+        </section>
+
+
+        <!-- SEZIONE OFFERTA VIAGGIO -->
+        <section class="offerta" aria-label="Offerte di viaggio">
+            <div class="sovrapposizione">
+                <div class="contenuto">
+                    <div class="card_1">
+                        <div class="colonna1">
+                            <h2 class="chisono__subtitle"> Rendiamo ogni viaggio un’avventura unica </h2>
+                            <i> "Crediamo che viaggiare sia un’opportunità per arricchirsi, scoprire nuovi mondi e creare ricordi indimenticabili". </i>
+                            <br><br>
+
+
+                        </div>
+                        <div class="colonna2">
+                            <p>
+                                <strong><b>1. Esperienza e Competenza:<br></b></strong> Il nostro team di esperti è composto da professionisti appassionati, pronti a consigliarti le migliori destinazioni e attività. Conosciamo ogni angolo d'Italia e siamo in grado di suggerire le esperienze più autentiche e coinvolgenti.
+
+                                <strong><b>2. Itinerari Personalizzati:<br></b></strong> Ogni viaggio che organizziamo è unico e studiato nei minimi dettagli. Ascoltiamo le tue esigenze e i tuoi desideri per creare un itinerario su misura che rispecchi i tuoi sogni di viaggio.
+
+                                <strong><b>3. Assistenza Continua:<br></b></strong> Dalla pianificazione alla realizzazione del viaggio, ti offriamo un’assistenza costante. Siamo sempre disponibili per rispondere a domande, fornire consigli e risolvere eventuali imprevisti.
+                            </p>
+                            <button>
+                                <a href="./contatti.html">Richiedi Informazioni</a>
+                            </button>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            <div class="item">
-                <img src="./assets/img/IMG SITO TO WEBP/silvia-trigo-kAE6Kd7W2UA-unsplash.webp" alt="Positano">
-                <div class="content">
-                    <p>Agenzia di Viaggi Italiana</p>
-                    <a href="./Campania.html#POSITANO_section">
-                        <h2 class="testo_hero">POSITANO</h2>
-                    </a>
-                    <span id="paragrafo_hero">Lasciati guidare dal Sentiero degli Dei e ammira le vedute della Costiera Amalfitana, un’esperienza che offre un contatto diretto con la natura.</span>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- thumbnail -->
-        <div class="thumbnail">
-            <div class="item active">
-                <img src="./assets/img/IMG SITO TO WEBP/karol-chomka-9sj3HVs9KT0-unsplash.webp" alt="Acitrezza">
-                <div class="content">
-                    Acitrezza
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/img/IMG SITO TO WEBP/clay-banks-M4n71zrXQ8c-unsplash.webp" alt="Venezia">
-                <div class="content">
-                    Venezia
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/img/IMG SITO TO WEBP/giuseppe-mondi-K0VLuATuQ9o-unsplash.webp" alt="Trento">
-                <div class="content">
-                    Trento
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/img/IMG SITO TO WEBP/anders-jilden-cYrMQA7a3Wc-unsplash.webp" alt="Vernazza">
-                <div class="content">
-                    Vernazza
-                </div>
-            </div>
-            <div class="item">
-                <img src="./assets/img/IMG SITO TO WEBP/silvia-trigo-kAE6Kd7W2UA-unsplash.webp" alt="Positano">
-                <div class="content">
-                    Positano
-                </div>
-            </div><!-- button arrows -->
-        <div class="arrows">
-            <button id="prev" aria-label="Slide precedente"><</button>
-            <button id="next" aria-label="Slide successiva">></button>
-        </div>
-
-        </div>
-    </section>
-
-
-
- <!-- INFO SECTION -->
-    <section class="chisono section" aria-label="Informazioni sull'agenzia">
-        <div class="chisono__container container grid">
-            <div class="chisono__data">
-                <div class="chisono__header">
-                    <h1 class="chisono__title">ITALY</h1>
-                    <h2 class="chisono__subtitle"> Viaggia alla scoperta <br> delle bellezze italiane</h2>
-                </div>
-
-                <div class="chisono__footer">
-                    <h3 class="chisono__title-description"> Esplora l'Italia autentica con i nostri viaggi su misura</h3>
-                    <p class="chisono__description">Agenzia di viaggi esperta nel creare esperienze di viaggio uniche e personalizzate. La nostra missione è quella di offrire un servizio di alta qualità che permetta di vivere un viaggio indimenticabile, in linea con i desideri e i propri interessi.
-                    </p>
-                    <button>
-                       <a href="./Destinazioni.html">Scopri le destinazioni</a>
-                    </button>
-                </div>
-            </div>
-            <div>
-                <img src="assets/img/image agenzia italiana di viaggi/altro/Italy-Map.svg" alt="Italy.image" class="chisono__img">
-            </div>
-        </div>
-    </section>
-
-
-    <!-- SEZIONE OFFERTA VIAGGIO -->
-    <section class="offerta" aria-label="Offerte di viaggio">
-    <div class="sovrapposizione">
-        <div class="contenuto">
-            <div class="card_1">
-                <div class="colonna1">
-                    <h2 class="chisono__subtitle"> Rendiamo ogni viaggio un’avventura unica </h2>
-                    <i> "Crediamo che viaggiare sia un’opportunità per arricchirsi, scoprire nuovi mondi e creare ricordi indimenticabili". </i>
-                    <br><br>
-
-
-                </div>
-                <div class="colonna2">
-                    <p>
-                        <strong><b>1. Esperienza e Competenza:<br></b></strong> Il nostro team di esperti è composto da professionisti appassionati, pronti a consigliarti le migliori destinazioni e attività. Conosciamo ogni angolo d'Italia e siamo in grado di suggerire le esperienze più autentiche e coinvolgenti.
-
-                        <strong><b>2. Itinerari Personalizzati:<br></b></strong> Ogni viaggio che organizziamo è unico e studiato nei minimi dettagli. Ascoltiamo le tue esigenze e i tuoi desideri per creare un itinerario su misura che rispecchi i tuoi sogni di viaggio.
-
-                        <strong><b>3. Assistenza Continua:<br></b></strong> Dalla pianificazione alla realizzazione del viaggio, ti offriamo un’assistenza costante. Siamo sempre disponibili per rispondere a domande, fornire consigli e risolvere eventuali imprevisti.
-                    </p>
-                    <button>
-                        <a href="./contatti.html">Richiedi Informazioni</a>
-                    </button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    </section>
+        </section>
 
 
 
 
     <!-- DESTINAZIONI SEZIONE CARROSELLO-->
-	<section class="location-carousel"  aria-label="Destinazioni popolari">
-		<!-- ELEMENTO TESTUALE-->
-		<div class="title">
-			<h2>Le nostre <strong> Destinazioni</strong></h2>
-		</div>
+    <section class="location-carousel" aria-label="Destinazioni popolari">
+        <!-- ELEMENTO TESTUALE-->
+        <div class="title">
+            <h2>Le nostre <strong>Destinazioni</strong></h2>
+        </div>
 
-		<!-- ELEMENTO CARROSELLO-->
-		<div class="carosello">
+        <!-- ELEMENTO CARROSELLO-->
+        <div class="carosello">
+            <!-- Carosello Item -->
             <div class="carosello-item">
                 <a href="./Sicilia.html" class="h-full block">
                     <figure>
                         <img loading="lazy" decoding="async" width="1024" height="512"
                             src="./assets/img/IMG SITO TO WEBP/jonathan-skule-vEsPPka4m4Q-unsplash.webp"
                             class="attachment-large size-large wp-post-image" alt="Taormina, Sicilia">
-                        <img decoding="async" width="340" height="394"
+                        <img loading="lazy" decoding="async" width="340" height="394"
                             src="./assets/img/image agenzia italiana di viaggi/altro/Italy-Map-Sicilia.svg"
-                            class="attachment-large size-large" alt="" data-skip-lazy="1" loading="lazy">
+                            class="attachment-large size-large" alt="Mappa Sicilia">
                         <div class="regione">
                             <p class="h6 text-gold">Destinazione</p>
                             <h3>Sicilia</h3>
@@ -270,15 +265,17 @@
                     </figure>
                 </a>
             </div>
+
+            <!-- Carosello Item -->
             <div class="carosello-item">
                 <a href="./Veneto.html" class="h-full block">
                     <figure>
                         <img loading="lazy" decoding="async" width="1024" height="683"
                             src="./assets/img/IMG SITO TO WEBP/canmandawe-ftTsK4QinMw-unsplash.webp"
                             class="attachment-large size-large wp-post-image" alt="Venezia">
-                        <img decoding="async" width="340" height="394"
+                        <img loading="lazy" decoding="async" width="340" height="394"
                             src="./assets/img/image agenzia italiana di viaggi/altro/Italy-Map-Veneto.svg"
-                            class="attachment-large size-large" alt="" data-skip-lazy="1" loading="lazy">
+                            class="attachment-large size-large" alt="Mappa Veneto">
                         <div class="regione">
                             <p>Destinazione</p>
                             <h3>Veneto</h3>
@@ -286,19 +283,19 @@
                     </figure>
                 </a>
             </div>
+
+            <!-- Carosello Item -->
             <div class="carosello-item">
                 <a href="./Trentino.html" class="h-full block">
                     <figure>
                         <img loading="lazy" decoding="async" width="1024" height="682"
                             src="./assets/img/IMG SITO TO WEBP/connor-stirling-vfWAYeKye58-unsplash.webp"
                             class="attachment-large size-large wp-post-image" alt="Dolomiti, Trentino-Alto-Adige"
-                            srcset="./assets/img/IMG SITO TO WEBP/marc-st-6ajQ-lAszvs-unsplash.webp?strip=all&amp;lossy=1&amp;sharp=1&amp;w=1920&amp;ssl=1 1920w""
-                            sizes="(max-width: 1024px) 100vw, 1024px" draggable="false"
-                            ondragstart="return false;"> <img decoding="async" width="340"
-                            height="394"
+                            srcset="./assets/img/IMG SITO TO WEBP/marc-st-6ajQ-lAszvs-unsplash.webp?strip=all&amp;lossy=1&amp;sharp=1&amp;w=1920&amp;ssl=1 1920w"
+                            sizes="(max-width: 1024px) 100vw, 1024px">
+                        <img loading="lazy" decoding="async" width="340" height="394"
                             src="./assets/img/image agenzia italiana di viaggi/altro/Italy-Map-Trentino.Alto.Adige.svg"
-                            class="attachment-large size-large" alt="" data-skip-lazy="1"
-                            loading="lazy" draggable="false" ondragstart="return false;">
+                            class="attachment-large size-large" alt="Mappa Trentino-Alto-Adige">
                         <div class="regione">
                             <p>Destinazione</p>
                             <h3>Trentino</h3>
@@ -306,40 +303,39 @@
                     </figure>
                 </a>
             </div>
+
+            <!-- Carosello Item -->
             <div class="carosello-item">
                 <a href="./Liguria.html" class="h-full block">
                     <figure>
                         <img loading="lazy" decoding="async" width="1024" height="512"
                             src="./assets/img/IMG SITO TO WEBP/vincenzo-inzone-9p3eEgdNOXo-unsplash.webp"
                             class="attachment-large size-large wp-post-image" alt="Vernazza Parco-Nazionale-delle-Cinque-Terre, Spezia - Liguria"
-                            srcset="./assets/img/IMG SITO TO WEBP/dorian-mongel-gVwFedcc1rY-unsplash.webp?strip=all&amp;lossy=1&amp;sharp=1&amp;w=1920&amp;ssl=1 1920w""
-                            sizes="(max-width: 1024px) 100vw, 1024px" draggable="false"
-                            ondragstart="return false;"> <img decoding="async" width="340"
-                            height="394"
+                            srcset="./assets/img/IMG SITO TO WEBP/dorian-mongel-gVwFedcc1rY-unsplash.webp?strip=all&amp;lossy=1&amp;sharp=1&amp;w=1920&amp;ssl=1 1920w"
+                            sizes="(max-width: 1024px) 100vw, 1024px">
+                        <img loading="lazy" decoding="async" width="340" height="394"
                             src="./assets/img/image agenzia italiana di viaggi/altro/Italy-Map-Liguria.svg"
-                            class="attachment-large size-large" alt="" data-skip-lazy="1"
-                            loading="lazy" draggable="false" ondragstart="return false;">
+                            class="attachment-large size-large" alt="Mappa Liguria">
                         <div class="regione">
                             <p>Destinazione</p>
                             <h3>Liguria</h3>
                         </div>
-                     </figure>
+                    </figure>
                 </a>
             </div>
+
+            <!-- Carosello Item -->
             <div class="carosello-item">
                 <a href="./Campania.html" class="h-full block">
                     <figure class="p-12 h-full">
-                        <img decoding="async" width="1024" height="683"
+                        <img loading="lazy" decoding="async" width="1024" height="683"
                             src="./assets/img/IMG SITO TO WEBP/yoosun-won-CPrlIQJCibY-unsplash.webp"
-                            class="attachment-large size-large wp-post-image"
-                            alt="Costiera Amalfitana, Positano - Campania"
-                            srcset="./assets/img/IMG SITO TO WEBP/federico-di-dio-photography-Zw_CMLoNILg-unsplash.webp?strip=all&amp;lossy=1&amp;sharp=1&amp;w=1920&amp;ssl=1 1920w""
-                            sizes="(max-width: 1024px) 100vw, 1024px" draggable="false"
-                            ondragstart="return false;"> <img decoding="async" width="340"
-                            height="394"
+                            class="attachment-large size-large wp-post-image" alt="Costiera Amalfitana, Positano - Campania"
+                            srcset="./assets/img/IMG SITO TO WEBP/federico-di-dio-photography-Zw_CMLoNILg-unsplash.webp?strip=all&amp;lossy=1&amp;sharp=1&amp;w=1920&amp;ssl=1 1920w"
+                            sizes="(max-width: 1024px) 100vw, 1024px">
+                        <img loading="lazy" decoding="async" width="340" height="394"
                             src="./assets/img/image agenzia italiana di viaggi/altro/Italy-Map-Campania.svg"
-                            class="attachment-large size-large" alt="" data-skip-lazy="1"
-                            draggable="false" ondragstart="return false;">
+                            class="attachment-large size-large" alt="Mappa Campania">
                         <div class="regione">
                             <p>Destinazione</p>
                             <h3>Campania</h3>
@@ -348,53 +344,39 @@
                 </a>
             </div>
         </div>
-	</section>
+    </section>
 </main>
 
 <!--=============== FOOTER ===============-->
-        <footer class="footer" aria-label="Informazioni sul footer">
-            <div class="footer__container container grid">
-                <!-- <a href="./index.html" class="footer__logo">
-                    <img src="../assets/img/LOGO-B.png" alt="Logo Footer">
-                </a> -->
-                <div class="logo" alt="Logo">
-                    <a href="./index.html">
-                        <img src="./assets/img/LOGO-B.png" alt="Logo" width="260px" height="50px">
-                    </a>
-                </div>
+    <footer class="footer" aria-label="Informazioni sul footer">
+        <div class="footer__container container grid">
+            <a href="./index.html" class="footer__logo" aria-label="Logo">
+                <img src="./assets/img/LOGO-B.png" alt="Logo" width="260" height="50">
+            </a>
 
-                <div class="footer__content_info">
-                    <h3>Informazioni</h3>
-                    <p>
-                        Punto di riferimento per chi desidera vivere esperienze indimenticabili alla scoperta delle meraviglie italiane.
-                    </p>
-                </div>
-
-                <div class="footer__content_destinazioni">
-                        <ul>
-                            <h3>Destinazioni</h3>
-                            <li>
-                                <a href="./Sicilia.html">Sicilia</a></li>
-                            <li>
-                                <a href="./Veneto.html">Veneto</a>
-                            </li>
-                            <li>
-                                <a href="./Trentino.html">Trentino</a>
-                            </li>
-                            <li>
-                                <a href="./Liguria.html">Liguria</a>
-                            </li>
-                            <li>
-                                <a href="./Campania.html">Campania</a>
-                            </li>
-                        </ul>
-                </div>
+            <div class="footer__content_info">
+                <h3>Informazioni</h3>
+                <p>
+                    Punto di riferimento per chi desidera vivere esperienze indimenticabili alla scoperta delle meraviglie italiane.
+                </p>
             </div>
 
-            <p class="footer__copy" target="_blank"> 
-                &#169; DarioCaramagno. All right reserved
-            </p>
-        </footer>
+            <div class="footer__content_destinazioni">
+                <h3>Destinazioni</h3>
+                <ul>
+                    <li><a href="./Sicilia.html">Sicilia</a></li>
+                    <li><a href="./Veneto.html">Veneto</a></li>
+                    <li><a href="./Trentino.html">Trentino</a></li>
+                    <li><a href="./Liguria.html">Liguria</a></li>
+                    <li><a href="./Campania.html">Campania</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="footer__copy"> 
+            &#169; Dario Caramagno. All rights reserved.
+        </p>
+    </footer>
 
         <!--=============== SCROLL UP ===============-->
         <a href="#" class="scrollup" id="scroll-up">
