@@ -1156,3 +1156,17 @@ fieldset {
   object-fit: cover;
   filter: brightness(0.5);
 }
+
+.layout {
+  position: relative;
+  z-index: 1;
+  padding: 0rem 0rem 0rem;
+  /* backdrop-filter: brightness(0.4) !important; */
+  background-image: linear-gradient(to top, var(--colore-sfondo) 20%, transparent);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  width: 100vw;
+}
