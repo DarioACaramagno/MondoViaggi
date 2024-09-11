@@ -81,7 +81,7 @@
 
             <!-- Barra di ricerca -->
             <div class="ricerca" id="ricerca" role="search">
-                <input type="search" placeholder="Cerca..." aria-label="Cerca nel sito">
+                <input type="text" placeholder="Cerca..." id="searchInput" aria-label="Cerca nel sito" onkeydown="checkEnter(event)">
                 <div class="search"></div>
             </div>
         </nav>
@@ -298,7 +298,8 @@
             </div>
 
             <div class="footer__content_destinazioni">
-                <ul><h3>Destinazioni</h3>
+                <h3>Destinazioni</h3>
+                <ul>
                     <li><a href="./Sicilia.html">Sicilia</a></li>
                     <li><a href="./Veneto.html">Veneto</a></li>
                     <li><a href="./Trentino.html">Trentino</a></li>

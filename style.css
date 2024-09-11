@@ -1063,6 +1063,9 @@ figure img, figure video {
 .footer__content_destinazioni {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 /*=============== SCROLL UP ===============*/
