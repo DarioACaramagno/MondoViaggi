@@ -10,15 +10,12 @@
         <meta name="author" content="Dario Caramagno">
 
         <!-- Preload critical resources for performance -->
-        <link rel="preload" href="./assets/img/LOGO-B.png" as="image" type="image/png">
-        <link rel="preload" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" as="style">
+        <link rel="preload" href="./assets/img/LOGO-B.png" as="image" type="image/webp">
 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" href="./Responsive_Style.css">
 
-        <!--=============== REMIX ICONS ===============-->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" media="print" onload="this.media='all'">
     </head>
 
 
@@ -49,23 +46,15 @@
                 </li>
                 <li class="nav__item">
                     <a href="./Destinazioni.html" class="nav__link" role="menuitem" aria-haspopup="true" aria-expanded="false">Destinazioni</a>
-                    <ul class="submenu" role="menu" aria-label="Sottomenu Destinazioni">
-                        <li class="nav__item">
-                            <a href="./Sicilia.html" class="nav__link" role="menuitem">Sicilia</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="./Veneto.html" class="nav__link" role="menuitem">Veneto</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="./Trentino.html" class="nav__link" role="menuitem">Trentino</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="./Liguria.html" class="nav__link" role="menuitem">Liguria</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="./Campania.html" class="nav__link" role="menuitem">Campania</a>
-                        </li>
-                    </ul>
+                    <div class="submenu" role="menu" aria-label="Sottomenu Destinazioni">
+                        <ul class="nav__item">
+                            <li><a href="./Sicilia.html" class="nav__link" role="menuitem">Sicilia</a></li>
+                            <li><a href="./Veneto.html" class="nav__link" role="menuitem">Veneto</a></li>
+                            <li><a href="./Trentino.html" class="nav__link" role="menuitem">Trentino</a></li>
+                            <li><a href="./Liguria.html" class="nav__link" role="menuitem">Liguria</a></li>
+                            <li><a href="./Campania.html" class="nav__link" role="menuitem">Campania</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav__item">
                     <a href="./Attività.html" class="nav__link" role="menuitem">Servizi</a>
@@ -380,9 +369,9 @@
     </footer>
 
         <!--=============== SCROLL UP ===============-->
-        <a href="#" class="scrollup" id="scroll-up">
-            <i class="ri-arrow-up-s-line"></i>
-        </a>
+        <div class="scrollup" id="scroll-up">
+            <a href="#"><i class="ri-arrow-up-s-line"></i></a>
+        </div>
 
         <!--=============== SCROLL REVEAL ===============-->
         <script src="https://unpkg.com/scrollreveal"></script>
