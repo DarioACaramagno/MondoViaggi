@@ -1010,7 +1010,7 @@ figure img, figure video {
 
 /*=============== FOOTER ===============*/
 .footer__logo {
-  width: 80px;
+  width: 100%;
 }
 
 .footer__container {

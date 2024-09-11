@@ -161,3 +161,21 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(slideNext, 6000); // Cambia slide ogni 3 secondi (modifica il valore come preferisci)
 });
 
+/*=============== FUNZIONE DI RICERCA PAGINA ===============*/
+function searchPage() {
+    // Ottieni il valore dell'input di ricerca
+    var query = document.getElementById("searchInput").value.toLowerCase();
+
+    // Tenta di reindirizzare direttamente alla pagina corrispondente
+    if (query === "sicilia" || query === "veneto" || query === "trentino") {
+        window.location.href = query + ".html";
+    } else {
+        // Mostra il messaggio di errore
+        document.getElementById("errorMessage").style.display = "block";
+    }
+}
+
+function clearErrorMessage() {
+    // Nascondi il messaggio di errore quando l'utente modifica l'input
+    document.getElementById("errorMessage").style.display = "none";
+}

@@ -80,9 +80,10 @@
                 <i class="ri-close-line"></i>
             </div>
 
-            <!-- Barra di ricerca -->
+            <!-- Barra di ricerca con Funzionalità -->
             <div class="ricerca" id="ricerca" role="search">
-                <input type="search" placeholder="Cerca..." aria-label="Cerca nel sito">
+                <input type="text" placeholder="Cerca..." id="searchInput" aria-label="Cerca nel sito" onkeydown="checkEnter(event)">
+                <div class="search"></div>
             </div>
         </nav>
     </header>
@@ -213,7 +214,7 @@
                     <div class="card_1">
                         <div class="colonna1">
                             <h2 class="chisono__subtitle"> Rendiamo ogni viaggio un’avventura unica </h2>
-                            <i> "Crediamo che viaggiare sia un’opportunità per arricchirsi, scoprire nuovi mondi e creare ricordi indimenticabili". </i>
+                            <i> "Viaggiare è un’opportunità per arricchirsi, scoprire nuovi mondi e creare ricordi indimenticabili". </i>
                             <br><br>
 
 
@@ -362,8 +363,7 @@
             </div>
 
             <div class="footer__content_destinazioni">
-                <h3>Destinazioni</h3>
-                <ul>
+                <ul><h3>Destinazioni</h3>
                     <li><a href="./Sicilia.html">Sicilia</a></li>
                     <li><a href="./Veneto.html">Veneto</a></li>
                     <li><a href="./Trentino.html">Trentino</a></li>
