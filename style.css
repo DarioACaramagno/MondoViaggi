@@ -154,15 +154,6 @@ button:hover {
 }
 
 
-/*PULSANTI
-button,
-input {
-  border: none;
-  outline: none;
-}*/
-
-
-
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
   padding: 4rem 0 2rem;
@@ -226,39 +217,6 @@ header {
   display: flex;
   width: 2rem;
 }
-
-/* .nav__list {
-  flex-direction: row;
-  column-gap: 3.5rem;
-} */
-
-/* .nav__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 1rem;
-} */
-
-
-/* a.nav__link {
-  color: var(--colore-bianco);
-  backdrop-filter: contrast(0.5);
-  filter: drop-shadow(2px 2px 6px black);
-  font-size: var(--normal-font-size);
-  text-transform: initial;
-} */
-
-/* .chisono__title {
-  color: var(--colore-link);
-  font-size: var(--h2-font-size);
-  text-transform: uppercase;
-  font-weight: var(--font-semi-bold);
-  background: var(--gradiente-testo);
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  transition: .4s;
-} */
 
 .nav__link:hover {
   background: var(--colore-link);
@@ -352,7 +310,7 @@ nav.nav.container {
   /* text-shadow: 0 0 10px #ffeebd;; */
   padding: 0 80px 0 20px;
   border-radius: 30px;
-  box-shadow: 0 0 25px 0 #ffeebd;, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 25px 0 #ffeebd, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
   transition: all 1s;
   opacity: 0;
   z-index: 5;
@@ -428,18 +386,6 @@ header .menu{
   padding: 0;
   /* width: 400px; */
 }
-
-/* .nav .nav__item {
-  margin-left: 20px;
-
-} */
-
-/* Colore dei link nel menu */
-/* .nav .nav__link {
-  text-decoration: none;
-  color: #000; 
-} */
-
 
 
 
@@ -530,12 +476,6 @@ header .menu{
 svg{
   width: 25px;
 }
-
-/* Change background header 
-.scroll-header {
-  background-color: var(--colore-sfondo);
-}*/
-
 
 
 
@@ -735,19 +675,6 @@ svg{
   grid-template-columns: repeat(2, 1fr);
 }
 
-/* .chisono__container {
-  position: relative;
-  grid-template-columns: repeat(2, 1fr);
-  display: grid;
-  padding: 0rem 14rem 0rem 14rem;
-  gap: 40px;
-  margin: 0;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-} */
-
-
 
 .chisono__img {
   left: -2rem;
@@ -935,16 +862,6 @@ b{
   display: grid;
   width: 50%;
 }
-/*TESTO DESCRITTIVO SOPRA CAROSELLO*/
-/* .regione{
-  position: relative;
-  z-index: 10;
-  backdrop-filter: brightness(0.2);
-  padding: 40px;
-  margin: 0;
-} */
-
-
 
 /* Stili per l'elemento .regione */
 .regione {
@@ -1147,19 +1064,6 @@ figure img, figure video {
   display: flex;
   justify-content: center;
 }
-
-/* footer.footer {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  padding: 40px;
-  position: relative;
-  gap: 40px;
-} */
 
 /*=============== SCROLL UP ===============*/
 .scrollup {
